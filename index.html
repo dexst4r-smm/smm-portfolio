@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,44 +8,34 @@
 
 <title>Bryan Dexter Llasos | Social Media Specialist</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* THEME COLORS */
-
-:root{
---bg:#ffffff;
---text:#111827;
---card:#f1f5f9;
---accent:#2563eb;
-}
-
-body.dark{
---bg:#020617;
---text:#f1f5f9;
---card:#1e293b;
---accent:#3b82f6;
-}
-
-body.night{
---bg:#000814;
---text:#e2e8f0;
---card:#0f172a;
---accent:#60a5fa;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:var(--bg);
-color:var(--text);
-font-family:Arial;
+background:#0b1628;
+color:white;
 line-height:1.6;
-transition:.3s;
 }
 
-html{
-scroll-behavior:smooth;
+section{
+padding:100px 8%;
+}
+
+h2{
+font-size:36px;
+margin-bottom:30px;
 }
 
 /* NAVBAR */
@@ -55,101 +44,116 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:var(--card);
+background:#0b1628;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
+padding:18px 8%;
 z-index:1000;
 }
 
 nav ul{
 display:flex;
-gap:20px;
 list-style:none;
+gap:25px;
 }
 
 nav a{
 text-decoration:none;
-color:var(--text);
+color:white;
+font-weight:500;
 }
 
-.theme-btn{
-background:var(--accent);
-border:none;
-color:white;
-padding:8px 12px;
-border-radius:6px;
+nav a:hover{
+color:#4da3ff;
+}
+
+.toggle{
 cursor:pointer;
+font-size:20px;
 }
 
 /* HERO */
 
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
 align-items:center;
-justify-content:center;
-gap:60px;
-flex-wrap:wrap;
-padding:120px 20px;
+justify-content:space-between;
+padding-top:120px;
 }
 
 .hero-text{
-max-width:500px;
+max-width:600px;
 }
 
-.hero img{
-width:260px;
-border-radius:50%;
-border:4px solid var(--accent);
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#c7d3e3;
+margin-bottom:30px;
 }
 
 .btn{
-background:var(--accent);
-padding:12px 24px;
+background:#4da3ff;
+padding:12px 25px;
 border-radius:6px;
-color:white;
 text-decoration:none;
-display:inline-block;
-margin-top:15px;
+color:white;
 }
 
-/* SECTIONS */
-
-section{
-padding:100px 20px;
-max-width:1200px;
-margin:auto;
-scroll-margin-top:90px;
+.profile{
+width:300px;
+height:300px;
+border-radius:50%;
+border:5px solid #4da3ff;
+overflow:hidden;
 }
 
-h2{
-text-align:center;
-margin-bottom:40px;
-}
-
-/* PORTFOLIO */
-
-.grid{
-column-count:4;
-column-gap:20px;
-}
-
-.grid img{
+.profile img{
 width:100%;
-margin-bottom:20px;
+height:100%;
+object-fit:cover;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* SUCCESS */
+
+.success-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.success-grid img{
+width:100%;
 border-radius:10px;
-cursor:pointer;
-transition:.3s;
-break-inside:avoid;
 }
 
-.grid img:hover{
-transform:scale(1.04);
+/* GALLERY */
+
+.gallery{
+column-count:4;
+column-gap:15px;
 }
 
-/* VIDEO */
+.gallery img{
+width:100%;
+margin-bottom:15px;
+border-radius:10px;
+}
+
+/* VIDEOS */
 
 .video-grid{
 display:grid;
@@ -157,106 +161,72 @@ grid-template-columns:1fr 1fr;
 gap:30px;
 }
 
-.video-card{
-position:relative;
-cursor:pointer;
-}
+/* SKILLS */
 
-.video-card img{
-width:100%;
-border-radius:10px;
-}
-
-.play{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-font-size:50px;
-color:white;
-}
-
-/* ANALYTICS */
-
-.compare{
+.skills-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
 }
 
-.compare img{
-width:100%;
+.skill{
+background:#16243d;
+padding:25px;
+border-radius:10px;
+text-align:center;
+}
+
+.skill i{
+font-size:35px;
+margin-bottom:10px;
+color:#4da3ff;
+}
+
+/* EXPERIENCE */
+
+.exp-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.exp{
+background:#16243d;
+padding:25px;
 border-radius:10px;
 }
 
 /* CONTACT */
 
 .contact-grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
 }
 
-.contact-grid a{
-background:var(--card);
+.contact-box{
+background:#16243d;
 padding:20px;
-border-radius:10px;
-text-decoration:none;
-color:var(--text);
-width:140px;
-text-align:center;
+border-radius:8px;
+margin-bottom:15px;
 }
 
-/* LIGHTBOX */
+/* LIGHT MODE */
 
-.lightbox{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.9);
-display:none;
-align-items:center;
-justify-content:center;
+.light{
+background:white;
+color:black;
 }
 
-.lightbox img{
-max-width:90%;
-max-height:90%;
+.light nav{
+background:white;
 }
 
-/* VIDEO MODAL */
-
-.video-modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.9);
-display:none;
-align-items:center;
-justify-content:center;
-}
-
-.video-modal iframe{
-width:90%;
-height:500px;
-border:none;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-.grid{column-count:2;}
-
-.video-grid{grid-template-columns:1fr;}
-
-.compare{grid-template-columns:1fr;}
-
+.light .skill,
+.light .exp,
+.light .contact-box{
+background:#f1f1f1;
+color:black;
 }
 
 </style>
@@ -269,19 +239,21 @@ border:none;
 
 <nav>
 
-<h3>Bryan Dexter</h3>
+<h3>BDL</h3>
 
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
-<li><a href="#portfolio">Works</a></li>
+<li><a href="#success">My Success</a></li>
+<li><a href="#works">Works</a></li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
-<div>
-<button class="theme-btn" onclick="lightMode()">☀</button>
-<button class="theme-btn" onclick="darkMode()">🌙</button>
-<button class="theme-btn" onclick="nightMode()">🌌</button>
+<div class="toggle" onclick="toggleMode()">
+<i class="fa-solid fa-moon"></i>
 </div>
 
 </nav>
@@ -295,18 +267,16 @@ border:none;
 <h1>Hello, I'm Bryan</h1>
 
 <p>
-
-Results-driven Social Media Specialist managing Facebook,
-Instagram, LinkedIn, and TikTok through strategic content creation
-and analytics-driven optimization.
-
+Results-driven Social Media Specialist and Digital Marketing Professional managing Facebook, Instagram, LinkedIn, and TikTok platforms through strategic content creation, analytics-driven optimization, and engaging visual campaigns.
 </p>
 
-<a class="btn" href="#portfolio">Explore My Work</a>
+<a href="#works" class="btn">Explore My Work</a>
 
 </div>
 
+<div class="profile">
 <img src="profile.jpg.png">
+</div>
 
 </section>
 
@@ -316,94 +286,178 @@ and analytics-driven optimization.
 
 <h2>About Me</h2>
 
+<div class="about">
+
+<div>
+
 <p>
 
-BS Computer Science graduate (Cum Laude) specializing in
-social media growth strategies, digital marketing campaigns,
-and engaging visual content.
+I help brands grow their audience, reach, and engagement through organic social media strategies, graphic design, and short-form video content.
 
 </p>
 
-</section>
+<br>
 
-<!-- PORTFOLIO -->
+<p>
 
-<section id="portfolio">
+BS Computer Science Graduate – Cum Laude  
+Based in Daraga, Albay Philippines.
 
-<h2>Graphic Portfolio</h2>
+</p>
 
-<div class="grid">
+</div>
 
-<img src="graphic1.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic2.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic3.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic4.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic5.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic6.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic7.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic8.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic9.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic10.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic11.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic12.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic13.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic14.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic15.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic16.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic17.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic18.jpg.jpg" onclick="openImg(this.src)">
-<img src="graphic19.jpg.jpg" onclick="openImg(this.src)">
+<div>
+<img src="profile.jpg">
+</div>
 
 </div>
 
 </section>
 
-<!-- VIDEO -->
+<!-- SUCCESS -->
 
-<section>
+<section id="success">
+
+<h2>My Success</h2>
+
+<div class="success-grid">
+
+<div>
+<h3>Before Strategy</h3>
+<img src="before.jpg.jpg">
+</div>
+
+<div>
+<h3>After Strategy</h3>
+<img src="after.jpg.jpg">
+</div>
+
+</div>
+
+</section>
+
+<!-- WORKS -->
+
+<section id="works">
+
+<h2>Graphic Design Portfolio</h2>
+
+<div class="gallery">
+
+<img src="graphic1.jpg.jpg">
+<img src="graphic2.jpg.jpg">
+<img src="graphic3.jpg.jpg">
+<img src="graphic4.jpg.jpg">
+<img src="graphic5.jpg.jpg">
+<img src="graphic6.jpg.jpg">
+<img src="graphic7.jpg.jpg">
+<img src="graphic8.jpg.jpg">
+<img src="graphic9.jpg.jpg">
+<img src="graphic10.jpg.jpg">
+<img src="graphic11.jpg.jpg">
+<img src="graphic12.jpg.jpg">
+<img src="graphic13.jpg.jpg">
+<img src="graphic14.jpg.jpg">
+<img src="graphic15.jpg.jpg">
+<img src="graphic16.jpg.jpg">
+<img src="graphic17.jpg.jpg">
+<img src="graphic18.jpg.jpg">
+<img src="graphic19.jpg.jpg">
+
+</div>
+
+</section>
+
+<!-- VIDEOS -->
+
+<section id="videos">
 
 <h2>Video Content</h2>
 
 <div class="video-grid">
 
-<div class="video-card"
-onclick="openVideo('https://www.youtube.com/embed/ztQ-NTioExY')">
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/ztQ-NTioExY"
+frameborder="0"
+allowfullscreen></iframe>
 
-<img src="https://img.youtube.com/vi/ztQ-NTioExY/hqdefault.jpg">
-
-<div class="play"><i class="fa-solid fa-play"></i></div>
-
-</div>
-
-<div class="video-card"
-onclick="openVideo('https://www.youtube.com/embed/A03ppGuUEKM')">
-
-<img src="https://img.youtube.com/vi/A03ppGuUEKM/hqdefault.jpg">
-
-<div class="play"><i class="fa-solid fa-play"></i></div>
-
-</div>
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/A03ppGuUEKM"
+frameborder="0"
+allowfullscreen></iframe>
 
 </div>
 
 </section>
 
-<!-- ANALYTICS -->
+<!-- SKILLS -->
 
-<section>
+<section id="skills">
 
-<h2>Analytics Comparison</h2>
+<h2>Skills & Tools</h2>
 
-<div class="compare">
+<div class="skills-grid">
 
-<div>
-<h3>Before</h3>
-<img src="before.jpg.jpg">
+<div class="skill"><i class="fa-brands fa-facebook"></i><p>Facebook Marketing</p></div>
+<div class="skill"><i class="fa-brands fa-instagram"></i><p>Instagram Marketing</p></div>
+<div class="skill"><i class="fa-brands fa-linkedin"></i><p>LinkedIn Marketing</p></div>
+<div class="skill"><i class="fa-brands fa-tiktok"></i><p>TikTok Marketing</p></div>
+<div class="skill"><i class="fa-solid fa-chart-line"></i><p>Analytics</p></div>
+<div class="skill"><i class="fa-solid fa-image"></i><p>Graphic Design</p></div>
+<div class="skill"><i class="fa-solid fa-video"></i><p>Video Editing</p></div>
+<div class="skill"><i class="fa-solid fa-calendar"></i><p>Content Scheduling</p></div>
+
 </div>
 
-<div>
-<h3>After</h3>
-<img src="after.jpg.jpg">
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<h2>Professional Experience</h2>
+
+<div class="exp-grid">
+
+<div class="exp">
+
+<h3>Social Media Specialist</h3>
+<p>Bower Investment Partners</p>
+
+<ul>
+<li>Develop structured monthly content calendars</li>
+<li>Manage Facebook, Instagram, LinkedIn and TikTok</li>
+<li>Produce short-form video content</li>
+<li>Analyze social media performance metrics</li>
+</ul>
+
+</div>
+
+<div class="exp">
+
+<h3>Digital Marketing Staff / Social Media Manager</h3>
+<p>Bicol Speedtech Motorcorp</p>
+
+<ul>
+<li>Managed Facebook and TikTok platforms</li>
+<li>Produced marketing graphics and banners</li>
+<li>Improved reach through organic strategies</li>
+<li>Created engaging social media campaigns</li>
+</ul>
+
+</div>
+
+<div class="exp">
+
+<h3>Freelance Social Media Manager</h3>
+
+<ul>
+<li>Grew Facebook pages to 70k+ followers</li>
+<li>Produced graphics and short-form videos</li>
+<li>Built online communities</li>
+</ul>
+
 </div>
 
 </div>
@@ -414,83 +468,59 @@ onclick="openVideo('https://www.youtube.com/embed/A03ppGuUEKM')">
 
 <section id="contact">
 
-<h2>Contact</h2>
+<h2>Contact Me</h2>
 
 <div class="contact-grid">
 
-<a href="mailto:bryanndexter22@gmail.com">
-<i class="fa-solid fa-envelope"></i><br>Email
-</a>
+<div>
 
-<a href="tel:09101042773">
-<i class="fa-solid fa-phone"></i><br>Phone
-</a>
+<div class="contact-box">
+<i class="fa-solid fa-envelope"></i>
+ bryanndexter22@gmail.com
+</div>
 
-<a href="https://www.facebook.com/bdllasos" target="_blank">
-<i class="fa-brands fa-facebook"></i><br>Facebook
-</a>
+<div class="contact-box">
+<i class="fa-solid fa-phone"></i>
+ 09101042773
+</div>
 
-<a href="https://www.linkedin.com/in/bryan-dexter-antones-llasos-2two2" target="_blank">
-<i class="fa-brands fa-linkedin"></i><br>LinkedIn
-</a>
+<div class="contact-box">
+<i class="fa-brands fa-linkedin"></i>
+ linkedin.com/in/bryan-dexter-antones-llasos-2two2
+</div>
+
+<div class="contact-box">
+<i class="fa-brands fa-facebook"></i>
+ facebook.com/bdllasos
+</div>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Name" style="width:100%;padding:12px;margin-bottom:10px">
+
+<input type="email" placeholder="Email" style="width:100%;padding:12px;margin-bottom:10px">
+
+<textarea placeholder="Message" style="width:100%;height:120px;padding:12px"></textarea>
+
+<br><br>
+
+<button class="btn">Send Message</button>
+
+</form>
 
 </div>
 
 </section>
 
-<!-- IMAGE LIGHTBOX -->
-
-<div class="lightbox" id="lightbox" onclick="closeImg()">
-<img id="lightbox-img">
-</div>
-
-<!-- VIDEO MODAL -->
-
-<div class="video-modal" id="videoModal" onclick="closeVideo()">
-<iframe id="videoFrame" allowfullscreen></iframe>
-</div>
-
 <script>
 
-/* LIGHTBOX */
-
-function openImg(src){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=src;
-}
-
-function closeImg(){
-document.getElementById("lightbox").style.display="none";
-}
-
-/* VIDEO */
-
-function openVideo(url){
-document.getElementById("videoModal").style.display="flex";
-document.getElementById("videoFrame").src=url+"?autoplay=1";
-}
-
-function closeVideo(){
-document.getElementById("videoModal").style.display="none";
-document.getElementById("videoFrame").src="";
-}
-
-/* THEMES */
-
-function lightMode(){
-document.body.className="";
-}
-
-function darkMode(){
-document.body.className="dark";
-}
-
-function nightMode(){
-document.body.className="night";
+function toggleMode(){
+document.body.classList.toggle("light")
 }
 
 </script>
 
 </body>
 </html>
-```
