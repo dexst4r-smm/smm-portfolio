@@ -1,19 +1,20 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bryan Dexter Llasos | Social Media Growth Specialist</title>
+<title>Bryan Dexter Llasos | Social Media Specialist</title>
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* THEME VARIABLES */
+/* THEME COLORS */
 
 :root{
 --bg:#ffffff;
@@ -39,7 +40,7 @@ body.night{
 body{
 background:var(--bg);
 color:var(--text);
-font-family:Arial, sans-serif;
+font-family:Arial;
 line-height:1.6;
 transition:.3s;
 }
@@ -62,10 +63,6 @@ padding:15px 40px;
 z-index:1000;
 }
 
-nav h3{
-color:var(--accent);
-}
-
 nav ul{
 display:flex;
 gap:20px;
@@ -75,10 +72,7 @@ list-style:none;
 nav a{
 text-decoration:none;
 color:var(--text);
-font-size:14px;
 }
-
-/* THEME BUTTON */
 
 .theme-btn{
 background:var(--accent);
@@ -103,11 +97,6 @@ padding:120px 20px;
 
 .hero-text{
 max-width:500px;
-}
-
-.hero-text h1{
-font-size:46px;
-margin-bottom:15px;
 }
 
 .hero img{
@@ -138,29 +127,6 @@ scroll-margin-top:90px;
 h2{
 text-align:center;
 margin-bottom:40px;
-}
-
-/* CARDS */
-
-.card{
-background:var(--card);
-padding:25px;
-border-radius:10px;
-margin-bottom:20px;
-}
-
-/* SKILLS */
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.skill{
-background:var(--card);
-padding:20px;
-border-radius:8px;
 }
 
 /* PORTFOLIO */
@@ -242,11 +208,6 @@ width:140px;
 text-align:center;
 }
 
-.contact-grid i{
-font-size:28px;
-margin-bottom:10px;
-}
-
 /* LIGHTBOX */
 
 .lightbox{
@@ -283,27 +244,23 @@ justify-content:center;
 .video-modal iframe{
 width:90%;
 height:500px;
+border:none;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:900px){
 
-.grid{
-column-count:2;
-}
+.grid{column-count:2;}
 
-.video-grid{
-grid-template-columns:1fr;
-}
+.video-grid{grid-template-columns:1fr;}
 
-.compare{
-grid-template-columns:1fr;
-}
+.compare{grid-template-columns:1fr;}
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -315,20 +272,16 @@ grid-template-columns:1fr;
 <h3>Bryan Dexter</h3>
 
 <ul>
-
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#portfolio">Works</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
 <li><a href="#contact">Contact</a></li>
-
 </ul>
 
 <div>
-<button class="theme-btn" onclick="setLight()">☀</button>
-<button class="theme-btn" onclick="setDark()">🌙</button>
-<button class="theme-btn" onclick="setNight()">🌌</button>
+<button class="theme-btn" onclick="lightMode()">☀</button>
+<button class="theme-btn" onclick="darkMode()">🌙</button>
+<button class="theme-btn" onclick="nightMode()">🌌</button>
 </div>
 
 </nav>
@@ -344,8 +297,8 @@ grid-template-columns:1fr;
 <p>
 
 Results-driven Social Media Specialist managing Facebook,
-Instagram, LinkedIn, and TikTok through strategic content creation,
-analytics-driven optimization, and engaging visual campaigns.
+Instagram, LinkedIn, and TikTok through strategic content creation
+and analytics-driven optimization.
 
 </p>
 
@@ -365,8 +318,9 @@ analytics-driven optimization, and engaging visual campaigns.
 
 <p>
 
-BS Computer Science graduate (Cum Laude) specializing in social media
-growth strategies, digital marketing campaigns, and engaging visual content.
+BS Computer Science graduate (Cum Laude) specializing in
+social media growth strategies, digital marketing campaigns,
+and engaging visual content.
 
 </p>
 
@@ -412,7 +366,8 @@ growth strategies, digital marketing campaigns, and engaging visual content.
 
 <div class="video-grid">
 
-<div class="video-card" onclick="openVideo('https://www.youtube.com/embed/ztQ-NTioExY')">
+<div class="video-card"
+onclick="openVideo('https://www.youtube.com/embed/ztQ-NTioExY')">
 
 <img src="https://img.youtube.com/vi/ztQ-NTioExY/hqdefault.jpg">
 
@@ -420,7 +375,8 @@ growth strategies, digital marketing campaigns, and engaging visual content.
 
 </div>
 
-<div class="video-card" onclick="openVideo('https://www.youtube.com/embed/A03ppGuUEKM')">
+<div class="video-card"
+onclick="openVideo('https://www.youtube.com/embed/A03ppGuUEKM')">
 
 <img src="https://img.youtube.com/vi/A03ppGuUEKM/hqdefault.jpg">
 
@@ -441,59 +397,14 @@ growth strategies, digital marketing campaigns, and engaging visual content.
 <div class="compare">
 
 <div>
-
 <h3>Before</h3>
-
 <img src="before.jpg.jpg">
-
 </div>
 
 <div>
-
 <h3>After</h3>
-
 <img src="after.jpg.jpg">
-
 </div>
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Social Media Management</div>
-<div class="skill">Content Strategy</div>
-<div class="skill">Graphic Design (Canva)</div>
-<div class="skill">Video Editing (CapCut)</div>
-<div class="skill">Audience Engagement</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-<h2>Experience</h2>
-
-<div class="card">
-
-<h3>Social Media Specialist</h3>
-
-<p>
-
-Content strategy, social media analytics, graphics creation,
-and audience growth across multiple social platforms.
-
-</p>
 
 </div>
 
@@ -508,26 +419,26 @@ and audience growth across multiple social platforms.
 <div class="contact-grid">
 
 <a href="mailto:bryanndexter22@gmail.com">
-<i class="fa-solid fa-envelope"></i>Email
+<i class="fa-solid fa-envelope"></i><br>Email
 </a>
 
 <a href="tel:09101042773">
-<i class="fa-solid fa-phone"></i>Phone
+<i class="fa-solid fa-phone"></i><br>Phone
 </a>
 
 <a href="https://www.facebook.com/bdllasos" target="_blank">
-<i class="fa-brands fa-facebook"></i>Facebook
+<i class="fa-brands fa-facebook"></i><br>Facebook
 </a>
 
 <a href="https://www.linkedin.com/in/bryan-dexter-antones-llasos-2two2" target="_blank">
-<i class="fa-brands fa-linkedin"></i>LinkedIn
+<i class="fa-brands fa-linkedin"></i><br>LinkedIn
 </a>
 
 </div>
 
 </section>
 
-<!-- LIGHTBOX -->
+<!-- IMAGE LIGHTBOX -->
 
 <div class="lightbox" id="lightbox" onclick="closeImg()">
 <img id="lightbox-img">
@@ -536,12 +447,12 @@ and audience growth across multiple social platforms.
 <!-- VIDEO MODAL -->
 
 <div class="video-modal" id="videoModal" onclick="closeVideo()">
-<iframe id="videoFrame"></iframe>
+<iframe id="videoFrame" allowfullscreen></iframe>
 </div>
 
 <script>
 
-/* IMAGE LIGHTBOX */
+/* LIGHTBOX */
 
 function openImg(src){
 document.getElementById("lightbox").style.display="flex";
@@ -552,7 +463,7 @@ function closeImg(){
 document.getElementById("lightbox").style.display="none";
 }
 
-/* VIDEO MODAL */
+/* VIDEO */
 
 function openVideo(url){
 document.getElementById("videoModal").style.display="flex";
@@ -564,17 +475,17 @@ document.getElementById("videoModal").style.display="none";
 document.getElementById("videoFrame").src="";
 }
 
-/* THEME SWITCH */
+/* THEMES */
 
-function setLight(){
+function lightMode(){
 document.body.className="";
 }
 
-function setDark(){
+function darkMode(){
 document.body.className="dark";
 }
 
-function setNight(){
+function nightMode(){
 document.body.className="night";
 }
 
