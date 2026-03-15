@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,9 @@
 
 <title>Bryan Dexter Llasos | Social Media Growth Specialist</title>
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 *{
@@ -15,6 +19,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -33,7 +38,6 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-animation:fadeUp 1.2s ease;
 }
 
 .hero h1{
@@ -42,49 +46,56 @@ margin-bottom:10px;
 }
 
 .hero p{
-font-size:20px;
 opacity:.85;
+font-size:20px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
-padding:80px 20px;
-max-width:1100px;
+padding:90px 20px;
+max-width:1200px;
 margin:auto;
 }
 
 h2{
 text-align:center;
 margin-bottom:50px;
-font-size:32px;
+font-size:34px;
 }
 
-/* GRID */
+/* MASONRY PORTFOLIO */
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+column-count:4;
+column-gap:20px;
 }
 
-/* CARD */
-
-.card{
-background:#1e293b;
-border-radius:12px;
-overflow:hidden;
-cursor:pointer;
-transition:transform .35s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
+.grid img{
 width:100%;
-display:block;
+margin-bottom:20px;
+border-radius:10px;
+cursor:pointer;
+transition:transform .3s;
+break-inside:avoid;
+}
+
+.grid img:hover{
+transform:scale(1.04);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1000px){
+.grid{column-count:3;}
+}
+
+@media (max-width:700px){
+.grid{column-count:2;}
+}
+
+@media (max-width:500px){
+.grid{column-count:1;}
 }
 
 /* CASE STUDY */
@@ -96,6 +107,34 @@ border-radius:10px;
 max-width:700px;
 margin:auto;
 text-align:center;
+}
+
+/* BEFORE AFTER */
+
+.compare{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.compare img{
+width:100%;
+border-radius:10px;
+}
+
+/* VIDEO */
+
+.video{
+text-align:center;
+}
+
+.video a{
+background:#2563eb;
+padding:14px 26px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
 /* SERVICES */
@@ -111,17 +150,45 @@ background:#1e293b;
 padding:25px;
 border-radius:10px;
 text-align:center;
+transition:.3s;
+}
+
+.service:hover{
+transform:translateY(-8px);
 }
 
 /* CONTACT */
 
-.contact{
-text-align:center;
+.contact-grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-top:40px;
 }
 
-.contact p{
-margin-top:10px;
-opacity:.85;
+.contact-grid a{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+background:#1e293b;
+padding:22px;
+border-radius:12px;
+width:140px;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.contact-grid a:hover{
+transform:translateY(-6px);
+background:#2563eb;
+}
+
+.contact-grid i{
+font-size:28px;
+margin-bottom:10px;
 }
 
 /* LIGHTBOX */
@@ -136,7 +203,7 @@ background:rgba(0,0,0,.9);
 display:none;
 justify-content:center;
 align-items:center;
-z-index:1000;
+z-index:999;
 }
 
 .lightbox img{
@@ -145,20 +212,17 @@ max-height:85%;
 border-radius:10px;
 }
 
-/* ANIMATION */
+/* SCROLL ANIMATION */
 
-@keyframes fadeUp{
-
-from{
+.hidden{
 opacity:0;
-transform:translateY(30px);
+transform:translateY(40px);
+transition:all .8s;
 }
 
-to{
+.show{
 opacity:1;
 transform:translateY(0);
-}
-
 }
 
 </style>
@@ -169,51 +233,48 @@ transform:translateY(0);
 <body>
 
 
+
 <!-- HERO -->
 
-<div class="hero">
+<div class="hero hidden">
 
 <h1>Bryan Dexter Llasos</h1>
 
 <p>Social Media Growth Specialist</p>
 
-<p>Helping brands grow audience, reach, and engagement through strategic social media content.</p>
+<p>Helping brands grow audience, reach, and engagement through strategic content.</p>
 
 </div>
 
 
 
-<!-- GRAPHICS PORTFOLIO -->
+<!-- GRAPHIC PORTFOLIO -->
 
-<section>
+<section class="hidden">
 
 <h2>Graphic Portfolio</h2>
 
 <div class="grid">
 
-<div class="card">
 <img src="graphic1.jpg" onclick="openLightbox(this.src)">
-</div>
-
-<div class="card">
 <img src="graphic2.jpg" onclick="openLightbox(this.src)">
-</div>
-
-<div class="card">
 <img src="graphic3.jpg" onclick="openLightbox(this.src)">
-</div>
-
-<div class="card">
 <img src="graphic4.jpg" onclick="openLightbox(this.src)">
-</div>
-
-<div class="card">
 <img src="graphic5.jpg" onclick="openLightbox(this.src)">
-</div>
-
-<div class="card">
 <img src="graphic6.jpg" onclick="openLightbox(this.src)">
-</div>
+<img src="graphic7.jpg" onclick="openLightbox(this.src)">
+<img src="graphic8.jpg" onclick="openLightbox(this.src)">
+<img src="graphic9.jpg" onclick="openLightbox(this.src)">
+<img src="graphic10.jpg" onclick="openLightbox(this.src)">
+<img src="graphic11.jpg" onclick="openLightbox(this.src)">
+<img src="graphic12.jpg" onclick="openLightbox(this.src)">
+<img src="graphic13.jpg" onclick="openLightbox(this.src)">
+<img src="graphic14.jpg" onclick="openLightbox(this.src)">
+<img src="graphic15.jpg" onclick="openLightbox(this.src)">
+<img src="graphic16.jpg" onclick="openLightbox(this.src)">
+<img src="graphic17.jpg" onclick="openLightbox(this.src)">
+<img src="graphic18.jpg" onclick="openLightbox(this.src)">
+<img src="graphic19.jpg" onclick="openLightbox(this.src)">
 
 </div>
 
@@ -223,7 +284,7 @@ transform:translateY(0);
 
 <!-- CASE STUDY -->
 
-<section>
+<section class="hidden">
 
 <h2>Case Study</h2>
 
@@ -233,7 +294,7 @@ transform:translateY(0);
 
 <p>3.7M views before strategy</p>
 
-<p>17M+ reach after content optimization</p>
+<p>17M+ reach after optimization</p>
 
 <p>Organic audience growth through strategic content and engagement.</p>
 
@@ -243,32 +304,78 @@ transform:translateY(0);
 
 
 
+<!-- BEFORE AFTER -->
+
+<section class="hidden">
+
+<h2>Before vs After Analytics</h2>
+
+<div class="compare">
+
+<div>
+
+<h3>Before</h3>
+
+<img src="before.jpg">
+
+</div>
+
+<div>
+
+<h3>After</h3>
+
+<img src="after.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- VIDEO -->
+
+<section class="video hidden">
+
+<h2>Example Video</h2>
+
+<p>Sample content used for engagement strategy.</p>
+
+<br>
+
+<a href="https://drive.google.com/drive/folders/1qWHLqqaMYpiV0xcNcRtkPcl22-AHCKPk?usp=drive_link" target="_blank">
+
+Watch Video
+
+</a>
+
+</section>
+
+
+
 <!-- SERVICES -->
 
-<section>
+<section class="hidden">
 
 <h2>Services</h2>
 
 <div class="services">
 
 <div class="service">
-<h3>Social Media Growth</h3>
-<p>Audience and reach expansion strategies.</p>
+Social Media Growth Strategy
 </div>
 
 <div class="service">
-<h3>Content Strategy</h3>
-<p>Planning high-performing social media content.</p>
+Content Planning
 </div>
 
 <div class="service">
-<h3>Graphic Design</h3>
-<p>Professional social media graphics and posters.</p>
+Graphic Design
 </div>
 
 <div class="service">
-<h3>Engagement Optimization</h3>
-<p>Increasing audience interaction and community engagement.</p>
+Audience Engagement
 </div>
 
 </div>
@@ -279,13 +386,33 @@ transform:translateY(0);
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section class="hidden">
 
 <h2>Contact</h2>
 
-<p>Email: bryanndexter22@gmail.com</p>
+<div class="contact-grid">
 
-<p>Location: Daraga, Albay</p>
+<a href="mailto:bryanndexter22@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+<span>Email</span>
+</a>
+
+<a href="tel:+639101042773">
+<i class="fa-solid fa-phone"></i>
+<span>Phone</span>
+</a>
+
+<a href="https://www.facebook.com/bdllasos" target="_blank">
+<i class="fa-brands fa-facebook"></i>
+<span>Facebook</span>
+</a>
+
+<a href="https://www.linkedin.com/in/bryan-dexter-antones-llasos-2two2" target="_blank">
+<i class="fa-brands fa-linkedin"></i>
+<span>LinkedIn</span>
+</a>
+
+</div>
 
 </section>
 
@@ -303,6 +430,8 @@ transform:translateY(0);
 
 <script>
 
+/* LIGHTBOX */
+
 function openLightbox(src){
 
 document.getElementById("lightbox").style.display="flex";
@@ -317,8 +446,27 @@ document.getElementById("lightbox").style.display="none";
 
 }
 
+/* SCROLL ANIMATION */
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".hidden").forEach((el)=>observer.observe(el));
+
 </script>
 
 
 </body>
 </html>
+```
