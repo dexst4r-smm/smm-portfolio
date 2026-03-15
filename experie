@@ -251,7 +251,7 @@ color:black;
 
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
-<li><a href="#success">My Success</a></li>
+<li><a href="#success">Results</a></li>
 <li><a href="#works">Works</a></li>
 <li><a href="#videos">Videos</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -276,9 +276,7 @@ color:black;
 <h1>Hello, I'm Bryan</h1>
 
 <p>
-
 Results-driven Social Media Specialist and Digital Marketing Professional managing Facebook, Instagram, LinkedIn, and TikTok platforms through strategic content creation, analytics-driven optimization, and engaging visual campaigns.
-
 </p>
 
 <a href="#works" class="btn">Explore My Work</a>
@@ -299,47 +297,41 @@ Results-driven Social Media Specialist and Digital Marketing Professional managi
 
 <p>
 
-BS Computer Science graduate (Cum Laude) with strong experience in social media management, digital marketing, graphic design, and video content creation.
+BS Computer Science graduate (Cum Laude) specializing in Social Media Growth, Digital Marketing, Graphic Design, and Video Content Creation.
 
-I specialize in growing audiences organically through strategic content planning, audience engagement, and performance optimization.
+Experienced in managing Facebook, Instagram, LinkedIn, and TikTok platforms through data-driven strategies and engaging visual content.
 
 </p>
 
 </section>
 
-<!-- SUCCESS -->
+<!-- RESULTS -->
 
 <section id="success">
 
-<h2>My Success</h2>
+<h2>Analytics Results</h2>
 
 <div class="success-grid">
 
 <div>
-
 <h3>Before Strategy</h3>
-
 <img src="before.jpg.jpg">
-
 </div>
 
 <div>
-
 <h3>After Strategy</h3>
-
 <img src="after.jpg.jpg">
-
 </div>
 
 </div>
 
 </section>
 
-<!-- WORKS -->
+<!-- PORTFOLIO -->
 
 <section id="works">
 
-<h2>Graphic Design Portfolio</h2>
+<h2>Graphic Portfolio</h2>
 
 <div class="gallery">
 
@@ -451,63 +443,28 @@ allowfullscreen></iframe>
 
 <h3>Social Media Specialist</h3>
 <p><strong>Bower Investment Partners</strong></p>
-<p><em>February 2026 – Present</em></p>
+<p>February 2026 – Present</p>
 
 <ul>
-
-<li>Develop and execute strategic social media campaigns across Facebook, Instagram, LinkedIn, and TikTok.</li>
-
-<li>Create and manage monthly content calendars aligned with marketing goals and brand positioning.</li>
-
-<li>Design engaging marketing graphics and short-form video content to increase audience engagement.</li>
-
-<li>Monitor social media analytics, engagement metrics, and campaign performance to optimize strategy.</li>
-
-<li>Collaborate with marketing and business teams to strengthen brand visibility and digital presence.</li>
-
+<li>Manage Facebook, Instagram, LinkedIn and TikTok accounts</li>
+<li>Create structured monthly content calendars</li>
+<li>Produce short-form marketing videos</li>
+<li>Analyze social media performance metrics</li>
 </ul>
 
 </div>
 
-
 <div class="exp">
 
-<h3>Digital Marketing & Social Media Manager</h3>
+<h3>Digital Marketing / Social Media Manager</h3>
 <p><strong>Bicol Speedtech Motorcorp</strong></p>
-<p><em>February 2025 – March 2026</em></p>
+<p>February 2025 – March 2026</p>
 
 <ul>
-
-<li>Managed official Facebook and social media platforms to improve brand visibility and engagement.</li>
-
-<li>Produced marketing graphics, promotional banners, and short-form video content.</li>
-
-<li>Increased social media reach and engagement through optimized posting strategies.</li>
-
-<li>Implemented content planning, hashtag strategies, and audience engagement techniques.</li>
-
-<li>Analyzed performance insights using Facebook analytics and engagement data.</li>
-
-</ul>
-
-</div>
-
-
-<div class="exp">
-
-<h3>Freelance Social Media Manager</h3>
-<p><em>2020 – 2024</em></p>
-
-<ul>
-
-<li>Managed and grew Facebook pages with audiences reaching over 70K–150K followers.</li>
-
-<li>Created viral social media content including graphics and short-form videos.</li>
-
-<li>Built active online communities through consistent engagement and content strategy.</li>
-
-<li>Helped businesses increase organic reach, brand awareness, and audience interaction.</li>
-
+<li>Managed Facebook and TikTok marketing pages</li>
+<li>Designed promotional graphics and campaigns</li>
+<li>Improved engagement through optimized content strategy</li>
+<li>Analyzed analytics insights and audience reach</li>
 </ul>
 
 </div>
@@ -547,20 +504,6 @@ allowfullscreen></iframe>
 </div>
 
 </div>
-
-<form>
-
-<input type="text" placeholder="Name" style="width:100%;padding:12px;margin-bottom:10px">
-
-<input type="email" placeholder="Email" style="width:100%;padding:12px;margin-bottom:10px">
-
-<textarea placeholder="Message" style="width:100%;height:120px;padding:12px"></textarea>
-
-<br><br>
-
-<button class="btn">Send Message</button>
-
-</form>
 
 </div>
 
