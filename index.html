@@ -27,7 +27,6 @@ scroll-behavior:smooth;
 body{
 background:#0b1628;
 color:white;
-line-height:1.6;
 }
 
 /* NAVBAR */
@@ -36,11 +35,11 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:#0b1628;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 8%;
+padding:20px 8%;
+background:#0b1628;
 z-index:999;
 }
 
@@ -80,7 +79,7 @@ max-width:600px;
 }
 
 .hero h1{
-font-size:58px;
+font-size:56px;
 margin-bottom:20px;
 }
 
@@ -98,8 +97,8 @@ color:white;
 }
 
 .profile{
-width:300px;
-height:300px;
+width:280px;
+height:280px;
 border-radius:50%;
 border:5px solid #4da3ff;
 overflow:hidden;
@@ -122,7 +121,7 @@ font-size:36px;
 margin-bottom:30px;
 }
 
-/* SUCCESS */
+/* RESULTS */
 
 .success-grid{
 display:grid;
@@ -135,7 +134,7 @@ width:100%;
 border-radius:10px;
 }
 
-/* GALLERY */
+/* PORTFOLIO */
 
 .gallery{
 column-count:4;
@@ -207,14 +206,58 @@ border-radius:10px;
 .contact-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:30px;
+gap:40px;
 }
 
 .contact-box{
 background:#16243d;
-padding:20px;
+padding:18px;
 border-radius:8px;
+margin-bottom:12px;
+}
+
+.social-icons{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.social-icons a{
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#1e2b42;
+border-radius:50%;
+font-size:18px;
+color:white;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+background:#4da3ff;
+transform:translateY(-4px);
+}
+
+form input,
+form textarea{
+width:100%;
+padding:12px;
 margin-bottom:15px;
+border:none;
+border-radius:6px;
+}
+
+form button{
+background:#e63946;
+border:none;
+padding:14px;
+width:100%;
+border-radius:6px;
+color:white;
+font-weight:600;
+cursor:pointer;
 }
 
 /* LIGHT MODE */
@@ -251,7 +294,7 @@ color:black;
 
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
-<li><a href="#success">Results</a></li>
+<li><a href="#results">Results</a></li>
 <li><a href="#works">Works</a></li>
 <li><a href="#videos">Videos</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -276,7 +319,7 @@ color:black;
 <h1>Hello, I'm Bryan</h1>
 
 <p>
-Results-driven Social Media Specialist and Digital Marketing Professional managing Facebook, Instagram, LinkedIn, and TikTok platforms through strategic content creation, analytics-driven optimization, and engaging visual campaigns.
+Social Media Specialist helping brands grow through strategic content, analytics-driven marketing, and engaging visual campaigns across Facebook, Instagram, LinkedIn, and TikTok.
 </p>
 
 <a href="#works" class="btn">Explore My Work</a>
@@ -297,9 +340,9 @@ Results-driven Social Media Specialist and Digital Marketing Professional managi
 
 <p>
 
-BS Computer Science graduate (Cum Laude) specializing in Social Media Growth, Digital Marketing, Graphic Design, and Video Content Creation.
+I’m a BS Computer Science graduate (Cum Laude) specializing in Social Media Growth, Digital Marketing, Graphic Design, and Video Content Creation.
 
-Experienced in managing Facebook, Instagram, LinkedIn, and TikTok platforms through data-driven strategies and engaging visual content.
+I help brands grow their online presence by managing and optimizing Facebook, Instagram, LinkedIn, and TikTok through data-driven strategies, engaging visuals, and audience-focused content.
 
 </p>
 
@@ -307,7 +350,7 @@ Experienced in managing Facebook, Instagram, LinkedIn, and TikTok platforms thro
 
 <!-- RESULTS -->
 
-<section id="success">
+<section id="results">
 
 <h2>Analytics Results</h2>
 
@@ -327,7 +370,7 @@ Experienced in managing Facebook, Instagram, LinkedIn, and TikTok platforms thro
 
 </section>
 
-<!-- PORTFOLIO -->
+<!-- WORKS -->
 
 <section id="works">
 
@@ -389,43 +432,15 @@ allowfullscreen></iframe>
 
 <div class="skills-grid">
 
-<div class="skill"><i class="fa-solid fa-bullseye"></i>Social Media Strategy</div>
+<div class="skill"><i class="fa-solid fa-chart-line"></i>Social Media Strategy</div>
 <div class="skill"><i class="fa-solid fa-pen"></i>Content Strategy</div>
-<div class="skill"><i class="fa-solid fa-chart-line"></i>Audience Growth Strategy</div>
-<div class="skill"><i class="fa-solid fa-hashtag"></i>Platform Marketing</div>
+<div class="skill"><i class="fa-solid fa-users"></i>Audience Growth Strategy</div>
 <div class="skill"><i class="fa-brands fa-facebook"></i>Facebook Marketing</div>
 <div class="skill"><i class="fa-brands fa-instagram"></i>Instagram Marketing</div>
 <div class="skill"><i class="fa-brands fa-linkedin"></i>LinkedIn Marketing</div>
 <div class="skill"><i class="fa-brands fa-tiktok"></i>TikTok Marketing</div>
 <div class="skill"><i class="fa-solid fa-palette"></i>Graphic Design</div>
 <div class="skill"><i class="fa-solid fa-video"></i>Video Editing</div>
-<div class="skill"><i class="fa-solid fa-calendar"></i>Content Scheduling</div>
-<div class="skill"><i class="fa-solid fa-users"></i>Community Management</div>
-
-</div>
-
-</section>
-
-<!-- TOOLS -->
-
-<section id="tools">
-
-<h2>Tools & Platforms</h2>
-
-<div class="skills-grid">
-
-<div class="skill"><i class="fa-brands fa-facebook"></i>Meta Business Suite</div>
-<div class="skill"><i class="fa-solid fa-palette"></i>Canva</div>
-<div class="skill"><i class="fa-solid fa-video"></i>CapCut</div>
-<div class="skill"><i class="fa-brands fa-google"></i>Google Workspace</div>
-<div class="skill"><i class="fa-brands fa-microsoft"></i>Microsoft Office</div>
-<div class="skill"><i class="fa-solid fa-database"></i>Follow Up Boss CRM</div>
-<div class="skill"><i class="fa-solid fa-database"></i>Pro Money CRM</div>
-<div class="skill"><i class="fa-solid fa-chart-bar"></i>Facebook Insights</div>
-<div class="skill"><i class="fa-solid fa-chart-line"></i>TikTok Analytics</div>
-<div class="skill"><i class="fa-brands fa-linkedin"></i>LinkedIn Analytics</div>
-<div class="skill"><i class="fa-solid fa-robot"></i>ChatGPT</div>
-<div class="skill"><i class="fa-solid fa-brain"></i>Gemini</div>
 
 </div>
 
@@ -443,13 +458,13 @@ allowfullscreen></iframe>
 
 <h3>Social Media Specialist</h3>
 <p><strong>Bower Investment Partners</strong></p>
-<p>February 2026 – Present</p>
+<p>Feb 2026 – Present</p>
 
 <ul>
-<li>Manage Facebook, Instagram, LinkedIn and TikTok accounts</li>
-<li>Create structured monthly content calendars</li>
-<li>Produce short-form marketing videos</li>
-<li>Analyze social media performance metrics</li>
+<li>Develop structured monthly content calendars</li>
+<li>Manage Facebook, Instagram, LinkedIn, and TikTok</li>
+<li>Create engaging marketing videos</li>
+<li>Analyze analytics insights to improve performance</li>
 </ul>
 
 </div>
@@ -458,13 +473,13 @@ allowfullscreen></iframe>
 
 <h3>Digital Marketing / Social Media Manager</h3>
 <p><strong>Bicol Speedtech Motorcorp</strong></p>
-<p>February 2025 – March 2026</p>
+<p>Feb 2025 – Mar 2026</p>
 
 <ul>
-<li>Managed Facebook and TikTok marketing pages</li>
-<li>Designed promotional graphics and campaigns</li>
-<li>Improved engagement through optimized content strategy</li>
-<li>Analyzed analytics insights and audience reach</li>
+<li>Managed Facebook & TikTok marketing pages</li>
+<li>Designed promotional graphics</li>
+<li>Improved engagement through optimized content</li>
+<li>Analyzed audience reach and performance</li>
 </ul>
 
 </div>
@@ -477,11 +492,15 @@ allowfullscreen></iframe>
 
 <section id="contact">
 
-<h2>Contact</h2>
+<h2>Get In Touch</h2>
 
 <div class="contact-grid">
 
 <div>
+
+<h3>Let's Connect</h3>
+
+<p>I'm always open to discussing projects, creative ideas, or opportunities.</p>
 
 <div class="contact-box">
 <i class="fa-solid fa-envelope"></i>
@@ -493,15 +512,39 @@ allowfullscreen></iframe>
  09101042773
 </div>
 
-<div class="contact-box">
-<i class="fa-brands fa-linkedin"></i>
- linkedin.com/in/bryan-dexter-antones-llasos-2two2
+<h3>Follow Me</h3>
+
+<div class="social-icons">
+
+<a href="https://www.facebook.com/bdllasos" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/bryan-dexter-antones-llasos-2two2" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="mailto:bryanndexter22@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
 </div>
 
-<div class="contact-box">
-<i class="fa-brands fa-facebook"></i>
- facebook.com/bdllasos
 </div>
+
+<div>
+
+<form>
+
+<input type="text" placeholder="Your name">
+
+<input type="email" placeholder="your.email@example.com">
+
+<textarea rows="6" placeholder="Tell me about your project..."></textarea>
+
+<button>Send Message</button>
+
+</form>
 
 </div>
 
