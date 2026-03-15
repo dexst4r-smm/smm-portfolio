@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -25,11 +24,12 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0b1628;
+background:#081426;
 color:white;
+line-height:1.6;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 position:fixed;
@@ -38,8 +38,8 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
-background:#0b1628;
+padding:18px 8%;
+background:#081426;
 z-index:999;
 }
 
@@ -52,16 +52,11 @@ list-style:none;
 nav a{
 text-decoration:none;
 color:white;
-font-weight:500;
-}
-
-nav a:hover{
-color:#4da3ff;
 }
 
 .toggle{
 cursor:pointer;
-font-size:20px;
+font-size:18px;
 }
 
 /* HERO */
@@ -72,19 +67,26 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:120px 8%;
+background-image:url('https://images.unsplash.com/photo-1557804506-669a67965ba0');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
 .hero-text{
 max-width:600px;
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:10px;
 }
 
 .hero h1{
-font-size:56px;
+font-size:52px;
 margin-bottom:20px;
 }
 
 .hero p{
-color:#c7d3e3;
+color:#d7e1f2;
 margin-bottom:25px;
 }
 
@@ -92,16 +94,16 @@ margin-bottom:25px;
 background:#4da3ff;
 padding:12px 25px;
 border-radius:6px;
-text-decoration:none;
 color:white;
+text-decoration:none;
 }
 
 .profile{
-width:280px;
-height:280px;
+width:260px;
+height:260px;
 border-radius:50%;
-border:5px solid #4da3ff;
 overflow:hidden;
+border:4px solid #4da3ff;
 }
 
 .profile img{
@@ -117,19 +119,35 @@ padding:100px 8%;
 }
 
 h2{
-font-size:36px;
+font-size:34px;
 margin-bottom:30px;
+}
+
+/* COUNTERS */
+
+.counter-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+text-align:center;
+margin-top:40px;
+}
+
+.counter{
+font-size:32px;
+font-weight:700;
+color:#4da3ff;
 }
 
 /* RESULTS */
 
-.success-grid{
+.results{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:30px;
+gap:40px;
 }
 
-.success-grid img{
+.results img{
 width:100%;
 border-radius:10px;
 }
@@ -145,11 +163,31 @@ column-gap:15px;
 width:100%;
 margin-bottom:15px;
 border-radius:10px;
+cursor:pointer;
 transition:0.3s;
 }
 
 .gallery img:hover{
-transform:scale(1.03);
+transform:scale(1.04);
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
 }
 
 /* VIDEOS */
@@ -160,29 +198,29 @@ grid-template-columns:1fr 1fr;
 gap:30px;
 }
 
-/* SKILLS */
+/* SKILLS + TOOLS */
 
-.skills-grid{
+.grid4{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(4,1fr);
 gap:25px;
 }
 
-.skill{
-background:#16243d;
+.card{
+background:#13233c;
 padding:25px;
 border-radius:10px;
 text-align:center;
 transition:0.3s;
 }
 
-.skill:hover{
+.card:hover{
 transform:translateY(-8px);
-background:#1e3356;
+background:#1d3557;
 }
 
-.skill i{
-font-size:32px;
+.card i{
+font-size:28px;
 margin-bottom:10px;
 color:#4da3ff;
 }
@@ -191,12 +229,12 @@ color:#4da3ff;
 
 .exp-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+grid-template-columns:1fr 1fr;
+gap:30px;
 }
 
 .exp{
-background:#16243d;
+background:#13233c;
 padding:25px;
 border-radius:10px;
 }
@@ -210,34 +248,31 @@ gap:40px;
 }
 
 .contact-box{
-background:#16243d;
-padding:18px;
-border-radius:8px;
-margin-bottom:12px;
+background:#13233c;
+padding:15px;
+border-radius:6px;
+margin-bottom:10px;
 }
 
-.social-icons{
+.social{
 display:flex;
 gap:15px;
 margin-top:20px;
 }
 
-.social-icons a{
-width:45px;
-height:45px;
+.social a{
+width:40px;
+height:40px;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#1e2b42;
 border-radius:50%;
-font-size:18px;
+background:#1d3557;
 color:white;
-transition:0.3s;
 }
 
-.social-icons a:hover{
+.social a:hover{
 background:#4da3ff;
-transform:translateY(-4px);
 }
 
 form input,
@@ -254,44 +289,38 @@ background:#e63946;
 border:none;
 padding:14px;
 width:100%;
-border-radius:6px;
 color:white;
-font-weight:600;
-cursor:pointer;
+border-radius:6px;
 }
 
 /* LIGHT MODE */
 
 .light{
 background:white;
-color:black;
+color:#111;
 }
 
 .light nav{
 background:white;
 }
 
-.light .skill,
+.light .card,
 .light .exp,
 .light .contact-box{
-background:#f2f2f2;
-color:black;
+background:#f1f1f1;
+color:#111;
 }
 
 </style>
-
 </head>
 
 <body>
-
-<!-- NAVBAR -->
 
 <nav>
 
 <h3>BDL</h3>
 
 <ul>
-
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#results">Results</a></li>
@@ -301,7 +330,6 @@ color:black;
 <li><a href="#tools">Tools</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#contact">Contact</a></li>
-
 </ul>
 
 <div class="toggle" onclick="toggleMode()">
@@ -310,8 +338,6 @@ color:black;
 
 </nav>
 
-<!-- HERO -->
-
 <section class="hero" id="home">
 
 <div class="hero-text">
@@ -319,7 +345,11 @@ color:black;
 <h1>Hello, I'm Bryan</h1>
 
 <p>
-Social Media Specialist helping brands grow through strategic content, analytics-driven marketing, and engaging visual campaigns across Facebook, Instagram, LinkedIn, and TikTok.
+
+I’m a BS Computer Science graduate (Cum Laude) specializing in Social Media Growth, Digital Marketing, Graphic Design, and Video Content Creation.
+
+I help brands grow their online presence by managing and optimizing Facebook, Instagram, LinkedIn, and TikTok through data-driven strategies, engaging visuals, and audience-focused content.
+
 </p>
 
 <a href="#works" class="btn">Explore My Work</a>
@@ -332,45 +362,49 @@ Social Media Specialist helping brands grow through strategic content, analytics
 
 </section>
 
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-
-I’m a BS Computer Science graduate (Cum Laude) specializing in Social Media Growth, Digital Marketing, Graphic Design, and Video Content Creation.
-
-I help brands grow their online presence by managing and optimizing Facebook, Instagram, LinkedIn, and TikTok through data-driven strategies, engaging visuals, and audience-focused content.
-
-</p>
-
-</section>
-
-<!-- RESULTS -->
-
 <section id="results">
 
-<h2>Analytics Results</h2>
+<h2>Performance Results</h2>
 
-<div class="success-grid">
+<div class="counter-grid">
 
 <div>
-<h3>Before Strategy</h3>
+<div class="counter" data-target="11200000">0</div>
+<p>Total Views</p>
+</div>
+
+<div>
+<div class="counter" data-target="452">0</div>
+<p>Watch Time Growth %</p>
+</div>
+
+<div>
+<div class="counter" data-target="236000">0</div>
+<p>Content Interactions</p>
+</div>
+
+<div>
+<div class="counter" data-target="150000">0</div>
+<p>Audience Reach</p>
+</div>
+
+</div>
+
+<div class="results">
+
+<div>
+<h3>Before</h3>
 <img src="before.jpg.jpg">
 </div>
 
 <div>
-<h3>After Strategy</h3>
+<h3>After</h3>
 <img src="after.jpg.jpg">
 </div>
 
 </div>
 
 </section>
-
-<!-- WORKS -->
 
 <section id="works">
 
@@ -402,51 +436,58 @@ I help brands grow their online presence by managing and optimizing Facebook, In
 
 </section>
 
-<!-- VIDEOS -->
-
 <section id="videos">
 
 <h2>Video Content</h2>
 
 <div class="video-grid">
 
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/ztQ-NTioExY"
-frameborder="0"
-allowfullscreen></iframe>
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/A03ppGuUEKM"
-frameborder="0"
-allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/ztQ-NTioExY"></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/A03ppGuUEKM"></iframe>
 
 </div>
 
 </section>
-
-<!-- SKILLS -->
 
 <section id="skills">
 
 <h2>Skills</h2>
 
-<div class="skills-grid">
+<div class="grid4">
 
-<div class="skill"><i class="fa-solid fa-chart-line"></i>Social Media Strategy</div>
-<div class="skill"><i class="fa-solid fa-pen"></i>Content Strategy</div>
-<div class="skill"><i class="fa-solid fa-users"></i>Audience Growth Strategy</div>
-<div class="skill"><i class="fa-brands fa-facebook"></i>Facebook Marketing</div>
-<div class="skill"><i class="fa-brands fa-instagram"></i>Instagram Marketing</div>
-<div class="skill"><i class="fa-brands fa-linkedin"></i>LinkedIn Marketing</div>
-<div class="skill"><i class="fa-brands fa-tiktok"></i>TikTok Marketing</div>
-<div class="skill"><i class="fa-solid fa-palette"></i>Graphic Design</div>
-<div class="skill"><i class="fa-solid fa-video"></i>Video Editing</div>
+<div class="card"><i class="fa-solid fa-chart-line"></i>Social Media Strategy</div>
+<div class="card"><i class="fa-solid fa-pen"></i>Content Strategy</div>
+<div class="card"><i class="fa-solid fa-users"></i>Audience Growth</div>
+<div class="card"><i class="fa-brands fa-facebook"></i>Facebook Marketing</div>
+
+<div class="card"><i class="fa-brands fa-instagram"></i>Instagram Marketing</div>
+<div class="card"><i class="fa-brands fa-linkedin"></i>LinkedIn Marketing</div>
+<div class="card"><i class="fa-brands fa-tiktok"></i>TikTok Marketing</div>
+<div class="card"><i class="fa-solid fa-video"></i>Video Editing</div>
 
 </div>
 
 </section>
 
-<!-- EXPERIENCE -->
+<section id="tools">
+
+<h2>Tools & Platforms</h2>
+
+<div class="grid4">
+
+<div class="card"><i class="fa-brands fa-facebook"></i>Meta Business Suite</div>
+<div class="card"><i class="fa-solid fa-palette"></i>Canva</div>
+<div class="card"><i class="fa-solid fa-scissors"></i>CapCut</div>
+<div class="card"><i class="fa-brands fa-google"></i>Google Workspace</div>
+
+<div class="card"><i class="fa-brands fa-microsoft"></i>Microsoft Office</div>
+<div class="card"><i class="fa-solid fa-database"></i>CRM Systems</div>
+<div class="card"><i class="fa-solid fa-robot"></i>ChatGPT</div>
+<div class="card"><i class="fa-solid fa-brain"></i>Gemini</div>
+
+</div>
+
+</section>
 
 <section id="experience">
 
@@ -455,40 +496,20 @@ allowfullscreen></iframe>
 <div class="exp-grid">
 
 <div class="exp">
-
 <h3>Social Media Specialist</h3>
-<p><strong>Bower Investment Partners</strong></p>
+<p><b>Bower Investment Partners</b></p>
 <p>Feb 2026 – Present</p>
-
-<ul>
-<li>Develop structured monthly content calendars</li>
-<li>Manage Facebook, Instagram, LinkedIn, and TikTok</li>
-<li>Create engaging marketing videos</li>
-<li>Analyze analytics insights to improve performance</li>
-</ul>
-
 </div>
 
 <div class="exp">
-
-<h3>Digital Marketing / Social Media Manager</h3>
-<p><strong>Bicol Speedtech Motorcorp</strong></p>
+<h3>Digital Marketing / SMM</h3>
+<p><b>Bicol Speedtech Motorcorp</b></p>
 <p>Feb 2025 – Mar 2026</p>
-
-<ul>
-<li>Managed Facebook & TikTok marketing pages</li>
-<li>Designed promotional graphics</li>
-<li>Improved engagement through optimized content</li>
-<li>Analyzed audience reach and performance</li>
-</ul>
-
 </div>
 
 </div>
 
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 
@@ -498,35 +519,31 @@ allowfullscreen></iframe>
 
 <div>
 
-<h3>Let's Connect</h3>
-
-<p>I'm always open to discussing projects, creative ideas, or opportunities.</p>
-
 <div class="contact-box">
 <i class="fa-solid fa-envelope"></i>
- bryanndexter22@gmail.com
+&nbsp; bryanndexter22@gmail.com
 </div>
 
 <div class="contact-box">
 <i class="fa-solid fa-phone"></i>
- 09101042773
+&nbsp; 09101042773
 </div>
 
-<h3>Follow Me</h3>
+<div class="contact-box">
+<i class="fa-brands fa-linkedin"></i>
+&nbsp; linkedin.com/in/bryan-dexter-antones-llasos-2two2
+</div>
 
-<div class="social-icons">
+<div class="contact-box">
+<i class="fa-brands fa-facebook"></i>
+&nbsp; facebook.com/bdllasos
+</div>
 
-<a href="https://www.facebook.com/bdllasos" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
+<div class="social">
 
-<a href="https://www.linkedin.com/in/bryan-dexter-antones-llasos-2two2" target="_blank">
-<i class="fab fa-linkedin-in"></i>
-</a>
-
-<a href="mailto:bryanndexter22@gmail.com">
-<i class="fas fa-envelope"></i>
-</a>
+<a href="https://facebook.com/bdllasos"><i class="fab fa-facebook-f"></i></a>
+<a href="https://linkedin.com/in/bryan-dexter-antones-llasos-2two2"><i class="fab fa-linkedin"></i></a>
+<a href="mailto:bryanndexter22@gmail.com"><i class="fa-solid fa-envelope"></i></a>
 
 </div>
 
@@ -537,9 +554,7 @@ allowfullscreen></iframe>
 <form>
 
 <input type="text" placeholder="Your name">
-
 <input type="email" placeholder="your.email@example.com">
-
 <textarea rows="6" placeholder="Tell me about your project..."></textarea>
 
 <button>Send Message</button>
@@ -552,16 +567,62 @@ allowfullscreen></iframe>
 
 </section>
 
+<div class="lightbox" id="lightbox">
+<img id="lightbox-img">
+</div>
+
 <script>
+
+/* DARK MODE */
 
 function toggleMode(){
 document.body.classList.toggle("light")
 }
 
-ScrollReveal().reveal('section',{
-distance:'60px',
+/* COUNTER */
+
+const counters=document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+const update=()=>{
+const target=+counter.getAttribute("data-target");
+const c=+counter.innerText;
+const inc=target/200;
+
+if(c<target){
+counter.innerText=Math.ceil(c+inc);
+setTimeout(update,10);
+}else{
+counter.innerText=target.toLocaleString();
+}
+};
+
+update();
+});
+
+/* LIGHTBOX */
+
+const images=document.querySelectorAll(".gallery img");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+images.forEach(img=>{
+img.addEventListener("click",()=>{
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+});
+});
+
+lightbox.onclick=()=>{
+lightbox.style.display="none";
+};
+
+/* ANIMATION */
+
+ScrollReveal().reveal("section",{
+distance:"60px",
 duration:1200,
-origin:'bottom',
+origin:"bottom",
 interval:200
 });
 
