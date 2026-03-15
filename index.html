@@ -1,94 +1,324 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Bryan Dexter Llasos | SMM Portfolio</title>
+
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bryan Dexter Llasos | Social Media Growth Specialist</title>
+
 <style>
-body{
-font-family: Arial;
+
+*{
 margin:0;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
-header{
-background:#111;
+body{
+background:#0f172a;
 color:white;
-padding:30px;
-text-align:center;
+line-height:1.6;
 }
 
-section{
-padding:40px;
-max-width:900px;
-margin:auto;
-background:white;
-margin-top:20px;
-}
+/* HERO */
 
-h1,h2{
-color:#333;
-}
-
-.btn{
-display:inline-block;
-padding:12px 20px;
-background:#0077ff;
-color:white;
-text-decoration:none;
-border-radius:5px;
-margin-top:10px;
-}
-
-.footer{
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
 padding:20px;
-color:#777;
+animation:fadeUp 1.2s ease;
 }
+
+.hero h1{
+font-size:52px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+opacity:.85;
+}
+
+/* SECTION */
+
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:50px;
+font-size:32px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* CARD */
+
+.card{
+background:#1e293b;
+border-radius:12px;
+overflow:hidden;
+cursor:pointer;
+transition:transform .35s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+/* CASE STUDY */
+
+.case{
+background:#1e293b;
+padding:30px;
+border-radius:10px;
+max-width:700px;
+margin:auto;
+text-align:center;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.service{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin-top:10px;
+opacity:.85;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:85%;
+border-radius:10px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<header>
+
+<!-- HERO -->
+
+<div class="hero">
+
 <h1>Bryan Dexter Llasos</h1>
+
 <p>Social Media Growth Specialist</p>
-</header>
 
-<section>
-<h2>About Me</h2>
-<p>
-I help brands grow their audience, reach, and engagement through
-organic social media strategies and community-driven content.
-</p>
-</section>
+<p>Helping brands grow audience, reach, and engagement through strategic social media content.</p>
 
-<section>
-<h2>Case Study</h2>
-<p><b>SpeedTech Growth</b></p>
-<ul>
-<li>3.7M views before strategy</li>
-<li>17M+ reach after content optimization</li>
-<li>Organic audience growth</li>
-</ul>
-</section>
-
-<section>
-<h2>Portfolio</h2>
-<p>You can download my full portfolio here.</p>
-
-<a class="btn" href="Portfolio_BD_LLASOS2026 (1)_compressed.pdf">
-Download Portfolio
-</a>
-</section>
-
-<section>
-<h2>Contact</h2>
-<p>Email: bryanndexter22@gmail.com</p>
-</section>
-
-<div class="footer">
-© Bryan Dexter Llasos
 </div>
+
+
+
+<!-- GRAPHICS PORTFOLIO -->
+
+<section>
+
+<h2>Graphic Portfolio</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="graphic1.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="card">
+<img src="graphic2.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="card">
+<img src="graphic3.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="card">
+<img src="graphic4.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="card">
+<img src="graphic5.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="card">
+<img src="graphic6.jpg" onclick="openLightbox(this.src)">
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CASE STUDY -->
+
+<section>
+
+<h2>Case Study</h2>
+
+<div class="case">
+
+<h3>Bicol Speedtech Motorcorp</h3>
+
+<p>3.7M views before strategy</p>
+
+<p>17M+ reach after content optimization</p>
+
+<p>Organic audience growth through strategic content and engagement.</p>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section>
+
+<h2>Services</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>Social Media Growth</h3>
+<p>Audience and reach expansion strategies.</p>
+</div>
+
+<div class="service">
+<h3>Content Strategy</h3>
+<p>Planning high-performing social media content.</p>
+</div>
+
+<div class="service">
+<h3>Graphic Design</h3>
+<p>Professional social media graphics and posters.</p>
+</div>
+
+<div class="service">
+<h3>Engagement Optimization</h3>
+<p>Increasing audience interaction and community engagement.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2>Contact</h2>
+
+<p>Email: bryanndexter22@gmail.com</p>
+
+<p>Location: Daraga, Albay</p>
+
+</section>
+
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+
+<img id="lightbox-img">
+
+</div>
+
+
+
+<script>
+
+function openLightbox(src){
+
+document.getElementById("lightbox").style.display="flex";
+
+document.getElementById("lightbox-img").src=src;
+
+}
+
+function closeLightbox(){
+
+document.getElementById("lightbox").style.display="none";
+
+}
+
+</script>
+
 
 </body>
 </html>
