@@ -18,52 +18,138 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial, sans-serif;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
+background:linear-gradient(135deg,#020617,#0f172a,#020617);
 color:white;
 line-height:1.6;
+}
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+z-index:1000;
+}
+
+nav h3{
+color:#3b82f6;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+padding:120px 20px;
 }
 
-.hero h1{
-font-size:52px;
-margin-bottom:10px;
+.hero-text{
+max-width:500px;
 }
 
-.hero p{
+.hero-text h1{
+font-size:46px;
+margin-bottom:15px;
+}
+
+.hero-text p{
 opacity:.85;
-font-size:20px;
+margin-bottom:25px;
 }
 
-/* SECTIONS */
+.hero img{
+width:260px;
+border-radius:50%;
+border:4px solid #3b82f6;
+}
+
+.btn{
+background:#3b82f6;
+padding:12px 24px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+}
+
+/* SECTION */
 
 section{
-padding:90px 20px;
+padding:100px 20px;
 max-width:1200px;
 margin:auto;
+scroll-margin-top:90px;
 }
 
 h2{
 text-align:center;
 margin-bottom:50px;
-font-size:34px;
+font-size:32px;
 }
 
-/* MASONRY GALLERY */
+/* ABOUT */
+
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+opacity:.9;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements{
+max-width:900px;
+margin:auto;
+}
+
+.achievements li{
+margin-bottom:10px;
+}
+
+/* SKILLS */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:20px;
+border-radius:8px;
+}
+
+/* PORTFOLIO */
 
 .grid{
 column-count:4;
@@ -75,29 +161,15 @@ width:100%;
 margin-bottom:20px;
 border-radius:10px;
 cursor:pointer;
-transition:transform .3s;
 break-inside:avoid;
+transition:.3s;
 }
 
 .grid img:hover{
 transform:scale(1.04);
 }
 
-/* RESPONSIVE */
-
-@media (max-width:1000px){
-.grid{column-count:3;}
-}
-
-@media (max-width:700px){
-.grid{column-count:2;}
-}
-
-@media (max-width:500px){
-.grid{column-count:1;}
-}
-
-/* VIDEO SECTION */
+/* VIDEO */
 
 .video-grid{
 display:grid;
@@ -115,67 +187,40 @@ width:100%;
 border-radius:10px;
 }
 
-.play-button{
+.play{
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-font-size:60px;
-color:white;
+font-size:50px;
 }
 
-/* RESULTS */
+/* EXPERIENCE */
 
-.results{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-text-align:center;
-}
-
-.result-card{
-background:#1e293b;
-padding:40px;
-border-radius:10px;
-}
-
-.result-number{
-font-size:48px;
-font-weight:bold;
-color:#3b82f6;
-}
-
-/* BEFORE AFTER */
-
-.compare{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-}
-
-.compare img{
-width:100%;
-border-radius:10px;
-}
-
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.service{
+.exp{
 background:#1e293b;
 padding:25px;
-border-radius:10px;
-text-align:center;
-transition:.3s;
+border-radius:8px;
+margin-bottom:20px;
 }
 
-.service:hover{
-transform:translateY(-8px);
+/* EDUCATION */
+
+.edu{
+background:#1e293b;
+padding:25px;
+border-radius:8px;
+max-width:700px;
+margin:auto;
+}
+
+/* CERTIFICATIONS */
+
+.cert{
+background:#1e293b;
+padding:20px;
+border-radius:8px;
+margin-bottom:10px;
 }
 
 /* CONTACT */
@@ -184,27 +229,17 @@ transform:translateY(-8px);
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:25px;
-margin-top:40px;
+gap:30px;
 }
 
 .contact-grid a{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
 background:#1e293b;
-padding:22px;
-border-radius:12px;
-width:140px;
+padding:20px;
+border-radius:10px;
 text-decoration:none;
 color:white;
-transition:.3s;
-}
-
-.contact-grid a:hover{
-transform:translateY(-6px);
-background:#2563eb;
+width:140px;
+text-align:center;
 }
 
 .contact-grid i{
@@ -222,15 +257,13 @@ width:100%;
 height:100%;
 background:rgba(0,0,0,.9);
 display:none;
-justify-content:center;
 align-items:center;
-z-index:999;
+justify-content:center;
 }
 
 .lightbox img{
 max-width:90%;
-max-height:85%;
-border-radius:10px;
+max-height:90%;
 }
 
 /* VIDEO MODAL */
@@ -243,213 +276,253 @@ width:100%;
 height:100%;
 background:rgba(0,0,0,.9);
 display:none;
-justify-content:center;
 align-items:center;
-z-index:1000;
-animation:fadeIn .4s;
+justify-content:center;
 }
 
 .video-modal iframe{
 width:90%;
 height:500px;
-border-radius:10px;
 }
 
-/* SCROLL ANIMATION */
+/* RESPONSIVE */
 
-.hidden{
-opacity:0;
-transform:translateY(40px);
-transition:all .8s;
+@media(max-width:900px){
+
+.grid{
+column-count:2;
 }
 
-.show{
-opacity:1;
-transform:translateY(0);
+.video-grid{
+grid-template-columns:1fr;
 }
 
-@keyframes fadeIn{
-from{opacity:0;}
-to{opacity:1;}
 }
 
 </style>
-
 </head>
 
 <body>
 
+<nav>
+
+<h3>Bryan Dexter</h3>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
 
 
 <!-- HERO -->
 
-<div class="hero hidden">
+<section class="hero" id="home">
 
-<h1>Bryan Dexter Llasos</h1>
+<div class="hero-text">
 
-<p>Social Media Growth Specialist</p>
+<h1>Hello, I'm Bryan</h1>
 
-<p>I create high-engagement graphics and both short-form and long-form video content to grow audience reach.</p>
+<p>
+
+Results-driven Social Media Specialist and Digital Marketing Professional
+managing Facebook, Instagram, LinkedIn, and TikTok platforms through
+strategic content creation, analytics-driven optimization, and engaging
+visual campaigns.
+
+</p>
+
+<a class="btn" href="#portfolio">Explore My Work</a>
 
 </div>
 
+<img src="profile.jpg">
+
+</section>
 
 
-<!-- GRAPHIC PORTFOLIO -->
+<!-- ABOUT -->
 
-<section class="hidden">
+<section id="about">
+
+<h2>About Me</h2>
+
+<p class="about">
+
+BS Computer Science graduate (Cum Laude) specializing in social media
+growth strategies, digital marketing campaigns, and high-performing
+visual content creation.
+
+Experienced in content strategy, audience engagement, performance
+analytics, and graphic design with tools like Canva and CapCut.
+
+</p>
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements">
+
+<h2>Key Achievements</h2>
+
+<ul class="achievements">
+
+<li>Increased Facebook content performance from 3.8M to 11.2M total views through optimized posting strategy.</li>
+
+<li>Boosted short-form video views by 491% and watch time by 452%.</li>
+
+<li>Generated 4.3M+ reach and 236K+ interactions through strategic social media management.</li>
+
+<li>Managed Facebook pages with 150,000+ combined followers.</li>
+
+</ul>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>Core Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Social Media Management</div>
+<div class="skill">Content Strategy & Planning</div>
+<div class="skill">Audience Engagement</div>
+<div class="skill">Digital Marketing Strategy</div>
+<div class="skill">Graphic Design (Canva)</div>
+<div class="skill">Short-Form Video Editing (CapCut)</div>
+<div class="skill">Analytics & Performance Optimization</div>
+<div class="skill">Facebook & Instagram Management</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
 
 <h2>Graphic Portfolio</h2>
 
 <div class="grid">
 
-<img src="graphic1.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic2.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic3.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic4.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic5.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic6.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic7.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic8.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic9.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic10.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic11.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic12.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic13.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic14.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic15.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic16.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic17.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic18.jpg.jpg" onclick="openLightbox(this.src)">
-<img src="graphic19.jpg.jpg" onclick="openLightbox(this.src)">
+<img src="graphic1.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic2.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic3.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic4.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic5.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic6.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic7.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic8.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic9.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic10.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic11.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic12.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic13.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic14.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic15.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic16.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic17.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic18.jpg.jpg" onclick="openImg(this.src)">
+<img src="graphic19.jpg.jpg" onclick="openImg(this.src)">
 
 </div>
 
 </section>
 
 
+<!-- EXPERIENCE -->
 
-<!-- VIDEO SECTION -->
+<section id="experience">
 
-<section class="hidden">
+<h2>Professional Experience</h2>
 
-<h2>Video Content</h2>
+<div class="exp">
 
-<p style="text-align:center;margin-bottom:40px;">
-Short-form and long-form video content designed for social media engagement.
+<h3>Social Media Specialist</h3>
+
+<p>
+
+Develop and manage monthly content calendars,
+design marketing graphics, and produce engaging
+short-form video content to improve audience engagement
+and brand visibility.
+
 </p>
 
-<div class="video-grid">
-
-<div class="video-card" onclick="openVideo('https://www.youtube.com/embed/ztQ-NTioExY')">
-<img src="https://img.youtube.com/vi/ztQ-NTioExY/hqdefault.jpg">
-<div class="play-button"><i class="fa-solid fa-play"></i></div>
 </div>
 
-<div class="video-card" onclick="openVideo('https://www.youtube.com/embed/A03ppGuUEKM')">
-<img src="https://img.youtube.com/vi/A03ppGuUEKM/hqdefault.jpg">
-<div class="play-button"><i class="fa-solid fa-play"></i></div>
-</div>
+<div class="exp">
 
-</div>
+<h3>Freelance Social Media Manager</h3>
 
-</section>
+<p>
 
+Managed Facebook pages growing from 0 to
+70K-120K followers through consistent content,
+community engagement, and collaboration with influencers.
 
-
-<!-- GROWTH RESULTS -->
-
-<section class="hidden">
-
-<h2>Growth Results</h2>
-
-<div class="results">
-
-<div class="result-card">
-<div class="result-number" data-target="3.7">0</div>
-<p>Million Views Before Strategy</p>
-</div>
-
-<div class="result-card">
-<div class="result-number" data-target="17">0</div>
-<p>Million+ Reach After Optimization</p>
-</div>
+</p>
 
 </div>
 
 </section>
 
 
+<!-- EDUCATION -->
 
-<!-- ANALYTICS -->
+<section id="education">
 
-<section class="hidden">
+<h2>Education</h2>
 
-<h2>Analytics Comparison</h2>
+<div class="edu">
 
-<div class="compare">
+<strong>Bachelor of Science in Computer Science</strong>
 
-<div>
-<h3>Before</h3>
-<img src="before.jpg.jpg">
-</div>
+<p>Bicol University Polangui – Cum Laude</p>
 
-<div>
-<h3>After</h3>
-<img src="after.jpg.jpg">
-</div>
+<p>2020 – 2024</p>
 
 </div>
 
 </section>
-
-
-
-<!-- SERVICES -->
-
-<section class="hidden">
-
-<h2>Services</h2>
-
-<div class="services">
-
-<div class="service">Social Media Growth Strategy</div>
-<div class="service">Content Planning</div>
-<div class="service">Graphic Design</div>
-<div class="service">Short-Form & Long-Form Video Editing</div>
-
-</div>
-
-</section>
-
 
 
 <!-- CONTACT -->
 
-<section class="hidden">
+<section id="contact">
 
 <h2>Contact</h2>
 
 <div class="contact-grid">
 
 <a href="mailto:bryanndexter22@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-<span>Email</span>
+<i class="fa-solid fa-envelope"></i>Email
 </a>
 
 <a href="tel:09101042773">
-<i class="fa-solid fa-phone"></i>
-<span>Phone</span>
+<i class="fa-solid fa-phone"></i>Phone
 </a>
 
 <a href="https://www.facebook.com/bdllasos" target="_blank">
-<i class="fa-brands fa-facebook"></i>
-<span>Facebook</span>
+<i class="fa-brands fa-facebook"></i>Facebook
 </a>
 
 <a href="https://www.linkedin.com/in/bryan-dexter-antones-llasos-2two2" target="_blank">
-<i class="fa-brands fa-linkedin"></i>
-<span>LinkedIn</span>
+<i class="fa-brands fa-linkedin"></i>LinkedIn
 </a>
 
 </div>
@@ -457,85 +530,20 @@ Short-form and long-form video content designed for social media engagement.
 </section>
 
 
-
-<!-- IMAGE LIGHTBOX -->
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<div class="lightbox" id="lightbox" onclick="closeImg()">
 <img id="lightbox-img">
 </div>
 
-
-
-<!-- VIDEO MODAL -->
-
-<div class="video-modal" id="videoModal" onclick="closeVideo()">
-<iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-
 <script>
 
-/* LIGHTBOX */
-
-function openLightbox(src){
+function openImg(src){
 document.getElementById("lightbox").style.display="flex";
 document.getElementById("lightbox-img").src=src;
 }
 
-function closeLightbox(){
+function closeImg(){
 document.getElementById("lightbox").style.display="none";
 }
-
-/* VIDEO MODAL */
-
-function openVideo(url){
-document.getElementById("videoModal").style.display="flex";
-document.getElementById("videoFrame").src=url+"?autoplay=1";
-}
-
-function closeVideo(){
-document.getElementById("videoModal").style.display="none";
-document.getElementById("videoFrame").src="";
-}
-
-/* SCROLL ANIMATION */
-
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll(".hidden").forEach((el)=>observer.observe(el));
-
-/* COUNTERS */
-
-const counters=document.querySelectorAll(".result-number");
-
-counters.forEach(counter=>{
-
-const target=+counter.getAttribute("data-target");
-let count=0;
-
-const update=()=>{
-
-count+=target/60;
-
-if(count<target){
-counter.innerText=count.toFixed(1)+"M";
-requestAnimationFrame(update);
-}else{
-counter.innerText=target+"M+";
-}
-
-};
-
-update();
-
-});
 
 </script>
 
