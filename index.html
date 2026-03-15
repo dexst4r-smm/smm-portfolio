@@ -24,12 +24,12 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#081426;
+background:#0b1628;
 color:white;
 line-height:1.6;
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
 position:fixed;
@@ -39,7 +39,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 8%;
-background:#081426;
+background:#0b1628;
 z-index:999;
 }
 
@@ -52,11 +52,16 @@ list-style:none;
 nav a{
 text-decoration:none;
 color:white;
+font-weight:500;
+}
+
+nav a:hover{
+color:#4da3ff;
 }
 
 .toggle{
 cursor:pointer;
-font-size:18px;
+font-size:20px;
 }
 
 /* HERO */
@@ -67,7 +72,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:120px 8%;
-background-image:url('https://images.unsplash.com/photo-1557804506-669a67965ba0');
+background:url('https://images.unsplash.com/photo-1557804506-669a67965ba0');
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
@@ -86,7 +91,7 @@ margin-bottom:20px;
 }
 
 .hero p{
-color:#d7e1f2;
+color:#c7d3e3;
 margin-bottom:25px;
 }
 
@@ -168,7 +173,7 @@ transition:0.3s;
 }
 
 .gallery img:hover{
-transform:scale(1.04);
+transform:scale(1.05);
 }
 
 /* LIGHTBOX */
@@ -198,7 +203,7 @@ grid-template-columns:1fr 1fr;
 gap:30px;
 }
 
-/* SKILLS + TOOLS */
+/* GRID 4 */
 
 .grid4{
 display:grid;
@@ -207,7 +212,7 @@ gap:25px;
 }
 
 .card{
-background:#13233c;
+background:#16243d;
 padding:25px;
 border-radius:10px;
 text-align:center;
@@ -216,13 +221,12 @@ transition:0.3s;
 
 .card:hover{
 transform:translateY(-8px);
-background:#1d3557;
+background:#1e3356;
 }
 
-.card i{
-font-size:28px;
+.card img{
+width:40px;
 margin-bottom:10px;
-color:#4da3ff;
 }
 
 /* EXPERIENCE */
@@ -234,7 +238,7 @@ gap:30px;
 }
 
 .exp{
-background:#13233c;
+background:#16243d;
 padding:25px;
 border-radius:10px;
 }
@@ -248,7 +252,7 @@ gap:40px;
 }
 
 .contact-box{
-background:#13233c;
+background:#16243d;
 padding:15px;
 border-radius:6px;
 margin-bottom:10px;
@@ -267,7 +271,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:50%;
-background:#1d3557;
+background:#1e3356;
 color:white;
 }
 
@@ -291,6 +295,7 @@ padding:14px;
 width:100%;
 color:white;
 border-radius:6px;
+cursor:pointer;
 }
 
 /* LIGHT MODE */
@@ -304,11 +309,23 @@ color:#111;
 background:white;
 }
 
+.light nav a{
+color:#111;
+}
+
+.light nav a:hover{
+color:#0077ff;
+}
+
 .light .card,
 .light .exp,
 .light .contact-box{
 background:#f1f1f1;
 color:#111;
+}
+
+.light p{
+color:#333;
 }
 
 </style>
@@ -455,15 +472,15 @@ I help brands grow their online presence by managing and optimizing Facebook, In
 
 <div class="grid4">
 
-<div class="card"><i class="fa-solid fa-chart-line"></i>Social Media Strategy</div>
-<div class="card"><i class="fa-solid fa-pen"></i>Content Strategy</div>
-<div class="card"><i class="fa-solid fa-users"></i>Audience Growth</div>
-<div class="card"><i class="fa-brands fa-facebook"></i>Facebook Marketing</div>
+<div class="card">Social Media Strategy</div>
+<div class="card">Content Strategy</div>
+<div class="card">Audience Growth</div>
+<div class="card">Facebook Marketing</div>
 
-<div class="card"><i class="fa-brands fa-instagram"></i>Instagram Marketing</div>
-<div class="card"><i class="fa-brands fa-linkedin"></i>LinkedIn Marketing</div>
-<div class="card"><i class="fa-brands fa-tiktok"></i>TikTok Marketing</div>
-<div class="card"><i class="fa-solid fa-video"></i>Video Editing</div>
+<div class="card">Instagram Marketing</div>
+<div class="card">LinkedIn Marketing</div>
+<div class="card">TikTok Marketing</div>
+<div class="card">Video Editing</div>
 
 </div>
 
@@ -475,15 +492,15 @@ I help brands grow their online presence by managing and optimizing Facebook, In
 
 <div class="grid4">
 
-<div class="card"><i class="fa-brands fa-facebook"></i>Meta Business Suite</div>
-<div class="card"><i class="fa-solid fa-palette"></i>Canva</div>
-<div class="card"><i class="fa-solid fa-scissors"></i>CapCut</div>
-<div class="card"><i class="fa-brands fa-google"></i>Google Workspace</div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png"><br>Meta Business Suite</div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"><br>Canva</div>
+<div class="card"><img src="https://seeklogo.com/images/C/capcut-logo-9477C78A0E-seeklogo.com.png"><br>CapCut</div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png"><br>Google Workspace</div>
 
-<div class="card"><i class="fa-brands fa-microsoft"></i>Microsoft Office</div>
-<div class="card"><i class="fa-solid fa-database"></i>CRM Systems</div>
-<div class="card"><i class="fa-solid fa-robot"></i>ChatGPT</div>
-<div class="card"><i class="fa-solid fa-brain"></i>Gemini</div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png"><br>Microsoft Office</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"><br>ChatGPT</div>
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"><br>Gemini</div>
+<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"><br>LinkedIn Analytics</div>
 
 </div>
 
@@ -502,7 +519,7 @@ I help brands grow their online presence by managing and optimizing Facebook, In
 </div>
 
 <div class="exp">
-<h3>Digital Marketing / SMM</h3>
+<h3>Digital Marketing / Social Media Manager</h3>
 <p><b>Bicol Speedtech Motorcorp</b></p>
 <p>Feb 2025 – Mar 2026</p>
 </div>
@@ -521,22 +538,22 @@ I help brands grow their online presence by managing and optimizing Facebook, In
 
 <div class="contact-box">
 <i class="fa-solid fa-envelope"></i>
-&nbsp; bryanndexter22@gmail.com
+ bryanndexter22@gmail.com
 </div>
 
 <div class="contact-box">
 <i class="fa-solid fa-phone"></i>
-&nbsp; 09101042773
+ 09101042773
 </div>
 
 <div class="contact-box">
 <i class="fa-brands fa-linkedin"></i>
-&nbsp; linkedin.com/in/bryan-dexter-antones-llasos-2two2
+ linkedin.com/in/bryan-dexter-antones-llasos-2two2
 </div>
 
 <div class="contact-box">
 <i class="fa-brands fa-facebook"></i>
-&nbsp; facebook.com/bdllasos
+ facebook.com/bdllasos
 </div>
 
 <div class="social">
@@ -573,13 +590,9 @@ I help brands grow their online presence by managing and optimizing Facebook, In
 
 <script>
 
-/* DARK MODE */
-
 function toggleMode(){
 document.body.classList.toggle("light")
 }
-
-/* COUNTER */
 
 const counters=document.querySelectorAll(".counter");
 
@@ -596,11 +609,8 @@ setTimeout(update,10);
 counter.innerText=target.toLocaleString();
 }
 };
-
 update();
 });
-
-/* LIGHTBOX */
 
 const images=document.querySelectorAll(".gallery img");
 const lightbox=document.getElementById("lightbox");
@@ -616,8 +626,6 @@ lightboxImg.src=img.src;
 lightbox.onclick=()=>{
 lightbox.style.display="none";
 };
-
-/* ANIMATION */
 
 ScrollReveal().reveal("section",{
 distance:"60px",
