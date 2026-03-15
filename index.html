@@ -13,30 +13,48 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* THEME VARIABLES */
+
+:root{
+--bg:#ffffff;
+--text:#111827;
+--card:#f1f5f9;
+--accent:#2563eb;
+}
+
+body.dark{
+--bg:#020617;
+--text:#f1f5f9;
+--card:#1e293b;
+--accent:#3b82f6;
+}
+
+body.night{
+--bg:#000814;
+--text:#e2e8f0;
+--card:#0f172a;
+--accent:#60a5fa;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
 font-family:Arial, sans-serif;
+line-height:1.6;
+transition:.3s;
 }
 
 html{
 scroll-behavior:smooth;
 }
 
-body{
-background:linear-gradient(135deg,#020617,#0f172a,#020617);
-color:white;
-line-height:1.6;
-}
-
-/* NAVIGATION */
+/* NAVBAR */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#020617;
+background:var(--card);
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -45,7 +63,7 @@ z-index:1000;
 }
 
 nav h3{
-color:#3b82f6;
+color:var(--accent);
 }
 
 nav ul{
@@ -55,9 +73,20 @@ list-style:none;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:var(--text);
 font-size:14px;
+}
+
+/* THEME BUTTON */
+
+.theme-btn{
+background:var(--accent);
+border:none;
+color:white;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
 }
 
 /* HERO */
@@ -81,26 +110,23 @@ font-size:46px;
 margin-bottom:15px;
 }
 
-.hero-text p{
-opacity:.85;
-margin-bottom:25px;
-}
-
 .hero img{
 width:260px;
 border-radius:50%;
-border:4px solid #3b82f6;
+border:4px solid var(--accent);
 }
 
 .btn{
-background:#3b82f6;
+background:var(--accent);
 padding:12px 24px;
 border-radius:6px;
-text-decoration:none;
 color:white;
+text-decoration:none;
+display:inline-block;
+margin-top:15px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
 padding:100px 20px;
@@ -111,28 +137,16 @@ scroll-margin-top:90px;
 
 h2{
 text-align:center;
-margin-bottom:50px;
-font-size:32px;
+margin-bottom:40px;
 }
 
-/* ABOUT */
+/* CARDS */
 
-.about{
-max-width:800px;
-margin:auto;
-text-align:center;
-opacity:.9;
-}
-
-/* ACHIEVEMENTS */
-
-.achievements{
-max-width:900px;
-margin:auto;
-}
-
-.achievements li{
-margin-bottom:10px;
+.card{
+background:var(--card);
+padding:25px;
+border-radius:10px;
+margin-bottom:20px;
 }
 
 /* SKILLS */
@@ -144,7 +158,7 @@ gap:20px;
 }
 
 .skill{
-background:#1e293b;
+background:var(--card);
 padding:20px;
 border-radius:8px;
 }
@@ -161,8 +175,8 @@ width:100%;
 margin-bottom:20px;
 border-radius:10px;
 cursor:pointer;
-break-inside:avoid;
 transition:.3s;
+break-inside:avoid;
 }
 
 .grid img:hover{
@@ -193,51 +207,37 @@ top:50%;
 left:50%;
 transform:translate(-50%,-50%);
 font-size:50px;
+color:white;
 }
 
-/* EXPERIENCE */
+/* ANALYTICS */
 
-.exp{
-background:#1e293b;
-padding:25px;
-border-radius:8px;
-margin-bottom:20px;
+.compare{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
 }
 
-/* EDUCATION */
-
-.edu{
-background:#1e293b;
-padding:25px;
-border-radius:8px;
-max-width:700px;
-margin:auto;
-}
-
-/* CERTIFICATIONS */
-
-.cert{
-background:#1e293b;
-padding:20px;
-border-radius:8px;
-margin-bottom:10px;
+.compare img{
+width:100%;
+border-radius:10px;
 }
 
 /* CONTACT */
 
 .contact-grid{
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
-gap:30px;
+justify-content:center;
+gap:25px;
 }
 
 .contact-grid a{
-background:#1e293b;
+background:var(--card);
 padding:20px;
 border-radius:10px;
 text-decoration:none;
-color:white;
+color:var(--text);
 width:140px;
 text-align:center;
 }
@@ -297,6 +297,10 @@ column-count:2;
 grid-template-columns:1fr;
 }
 
+.compare{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -304,23 +308,30 @@ grid-template-columns:1fr;
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 
 <h3>Bryan Dexter</h3>
 
 <ul>
+
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
-<li><a href="#achievements">Achievements</a></li>
+<li><a href="#portfolio">Works</a></li>
 <li><a href="#skills">Skills</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
 <li><a href="#experience">Experience</a></li>
-<li><a href="#education">Education</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
-</nav>
+<div>
+<button class="theme-btn" onclick="setLight()">☀</button>
+<button class="theme-btn" onclick="setDark()">🌙</button>
+<button class="theme-btn" onclick="setNight()">🌌</button>
+</div>
 
+</nav>
 
 <!-- HERO -->
 
@@ -332,10 +343,9 @@ grid-template-columns:1fr;
 
 <p>
 
-Results-driven Social Media Specialist and Digital Marketing Professional
-managing Facebook, Instagram, LinkedIn, and TikTok platforms through
-strategic content creation, analytics-driven optimization, and engaging
-visual campaigns.
+Results-driven Social Media Specialist managing Facebook,
+Instagram, LinkedIn, and TikTok through strategic content creation,
+analytics-driven optimization, and engaging visual campaigns.
 
 </p>
 
@@ -343,10 +353,9 @@ visual campaigns.
 
 </div>
 
-<img src="profile.jpg.png">
+<img src="profile.png">
 
 </section>
-
 
 <!-- ABOUT -->
 
@@ -354,62 +363,14 @@ visual campaigns.
 
 <h2>About Me</h2>
 
-<p class="about">
+<p>
 
 BS Computer Science graduate (Cum Laude) specializing in social media
-growth strategies, digital marketing campaigns, and high-performing
-visual content creation.
-
-Experienced in content strategy, audience engagement, performance
-analytics, and graphic design with tools like Canva and CapCut.
+growth strategies, digital marketing campaigns, and engaging visual content.
 
 </p>
 
 </section>
-
-
-<!-- ACHIEVEMENTS -->
-
-<section id="achievements">
-
-<h2>Key Achievements</h2>
-
-<ul class="achievements">
-
-<li>Increased Facebook content performance from 3.8M to 11.2M total views through optimized posting strategy.</li>
-
-<li>Boosted short-form video views by 491% and watch time by 452%.</li>
-
-<li>Generated 4.3M+ reach and 236K+ interactions through strategic social media management.</li>
-
-<li>Managed Facebook pages with 150,000+ combined followers.</li>
-
-</ul>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h2>Core Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Social Media Management</div>
-<div class="skill">Content Strategy & Planning</div>
-<div class="skill">Audience Engagement</div>
-<div class="skill">Digital Marketing Strategy</div>
-<div class="skill">Graphic Design (Canva)</div>
-<div class="skill">Short-Form Video Editing (CapCut)</div>
-<div class="skill">Analytics & Performance Optimization</div>
-<div class="skill">Facebook & Instagram Management</div>
-
-</div>
-
-</section>
-
 
 <!-- PORTFOLIO -->
 
@@ -443,63 +404,100 @@ analytics, and graphic design with tools like Canva and CapCut.
 
 </section>
 
+<!-- VIDEO -->
+
+<section>
+
+<h2>Video Content</h2>
+
+<div class="video-grid">
+
+<div class="video-card" onclick="openVideo('https://www.youtube.com/embed/ztQ-NTioExY')">
+
+<img src="https://img.youtube.com/vi/ztQ-NTioExY/hqdefault.jpg">
+
+<div class="play"><i class="fa-solid fa-play"></i></div>
+
+</div>
+
+<div class="video-card" onclick="openVideo('https://www.youtube.com/embed/A03ppGuUEKM')">
+
+<img src="https://img.youtube.com/vi/A03ppGuUEKM/hqdefault.jpg">
+
+<div class="play"><i class="fa-solid fa-play"></i></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ANALYTICS -->
+
+<section>
+
+<h2>Analytics Comparison</h2>
+
+<div class="compare">
+
+<div>
+
+<h3>Before</h3>
+
+<img src="before.jpg.jpg">
+
+</div>
+
+<div>
+
+<h3>After</h3>
+
+<img src="after.jpg.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Social Media Management</div>
+<div class="skill">Content Strategy</div>
+<div class="skill">Graphic Design (Canva)</div>
+<div class="skill">Video Editing (CapCut)</div>
+<div class="skill">Audience Engagement</div>
+
+</div>
+
+</section>
 
 <!-- EXPERIENCE -->
 
 <section id="experience">
 
-<h2>Professional Experience</h2>
+<h2>Experience</h2>
 
-<div class="exp">
+<div class="card">
 
 <h3>Social Media Specialist</h3>
 
 <p>
 
-Develop and manage monthly content calendars,
-design marketing graphics, and produce engaging
-short-form video content to improve audience engagement
-and brand visibility.
-
-</p>
-
-</div>
-
-<div class="exp">
-
-<h3>Freelance Social Media Manager</h3>
-
-<p>
-
-Managed Facebook pages growing from 0 to
-70K-120K followers through consistent content,
-community engagement, and collaboration with influencers.
+Content strategy, social media analytics, graphics creation,
+and audience growth across multiple social platforms.
 
 </p>
 
 </div>
 
 </section>
-
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-<h2>Education</h2>
-
-<div class="edu">
-
-<strong>Bachelor of Science in Computer Science</strong>
-
-<p>Bicol University Polangui – Cum Laude</p>
-
-<p>2020 – 2024</p>
-
-</div>
-
-</section>
-
 
 <!-- CONTACT -->
 
@@ -529,12 +527,21 @@ community engagement, and collaboration with influencers.
 
 </section>
 
+<!-- LIGHTBOX -->
 
 <div class="lightbox" id="lightbox" onclick="closeImg()">
 <img id="lightbox-img">
 </div>
 
+<!-- VIDEO MODAL -->
+
+<div class="video-modal" id="videoModal" onclick="closeVideo()">
+<iframe id="videoFrame"></iframe>
+</div>
+
 <script>
+
+/* IMAGE LIGHTBOX */
 
 function openImg(src){
 document.getElementById("lightbox").style.display="flex";
@@ -543,6 +550,32 @@ document.getElementById("lightbox-img").src=src;
 
 function closeImg(){
 document.getElementById("lightbox").style.display="none";
+}
+
+/* VIDEO MODAL */
+
+function openVideo(url){
+document.getElementById("videoModal").style.display="flex";
+document.getElementById("videoFrame").src=url+"?autoplay=1";
+}
+
+function closeVideo(){
+document.getElementById("videoModal").style.display="none";
+document.getElementById("videoFrame").src="";
+}
+
+/* THEME SWITCH */
+
+function setLight(){
+document.body.className="";
+}
+
+function setDark(){
+document.body.className="dark";
+}
+
+function setNight(){
+document.body.className="night";
 }
 
 </script>
