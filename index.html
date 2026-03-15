@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bryan Dexter Llasos | Social Media Specialist</title>
+<title>Bryan Dexter Llasos | Social Media Growth Specialist</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -23,10 +24,11 @@ font-family:Poppins,sans-serif;
 scroll-behavior:smooth;
 }
 
+/* BODY */
+
 body{
-background:#0b1628;
+background:#0c1a2b;
 color:white;
-line-height:1.6;
 }
 
 /* NAVBAR */
@@ -39,13 +41,17 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 8%;
-background:#0b1628;
+background:#0c1a2b;
 z-index:999;
+}
+
+nav h3{
+font-weight:700;
 }
 
 nav ul{
 display:flex;
-gap:25px;
+gap:28px;
 list-style:none;
 }
 
@@ -53,6 +59,7 @@ nav a{
 text-decoration:none;
 color:white;
 font-weight:500;
+transition:.3s;
 }
 
 nav a:hover{
@@ -60,8 +67,8 @@ color:#4da3ff;
 }
 
 .toggle{
-cursor:pointer;
 font-size:20px;
+cursor:pointer;
 }
 
 /* HERO */
@@ -70,43 +77,55 @@ font-size:20px;
 height:100vh;
 display:flex;
 align-items:center;
-justify-content:space-between;
+justify-content:center;
 padding:120px 8%;
-background:url('https://images.unsplash.com/photo-1557804506-669a67965ba0');
+background:url("https://images.unsplash.com/photo-1557804506-669a67965ba0");
 background-size:cover;
 background-position:center;
-background-attachment:fixed;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+position:relative;
+display:flex;
+align-items:center;
+gap:50px;
+max-width:1100px;
 }
 
 .hero-text{
 max-width:600px;
-background:rgba(0,0,0,0.6);
-padding:40px;
-border-radius:10px;
 }
 
-.hero h1{
-font-size:52px;
-margin-bottom:20px;
+.hero-text h1{
+font-size:50px;
+margin-bottom:15px;
 }
 
-.hero p{
-color:#c7d3e3;
+.hero-text p{
+color:#d5e2f3;
 margin-bottom:25px;
+line-height:1.6;
 }
 
-.btn{
-background:#4da3ff;
-padding:12px 25px;
-border-radius:6px;
-color:white;
-text-decoration:none;
-}
+/* PROFILE */
 
 .profile{
-width:260px;
-height:260px;
-border-radius:50%;
+width:200px;
+height:200px;
+border-radius:12px;
 overflow:hidden;
 border:4px solid #4da3ff;
 }
@@ -117,7 +136,18 @@ height:100%;
 object-fit:cover;
 }
 
-/* SECTION */
+/* BUTTON */
+
+.btn{
+background:#4da3ff;
+padding:12px 25px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+/* SECTIONS */
 
 section{
 padding:100px 8%;
@@ -128,18 +158,17 @@ font-size:34px;
 margin-bottom:30px;
 }
 
-/* COUNTERS */
+/* COUNTER */
 
 .counter-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:25px;
 text-align:center;
-margin-top:40px;
 }
 
 .counter{
-font-size:32px;
+font-size:36px;
 font-weight:700;
 color:#4da3ff;
 }
@@ -150,6 +179,7 @@ color:#4da3ff;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
+margin-top:40px;
 }
 
 .results img{
@@ -169,7 +199,7 @@ width:100%;
 margin-bottom:15px;
 border-radius:10px;
 cursor:pointer;
-transition:0.3s;
+transition:.3s;
 }
 
 .gallery img:hover{
@@ -184,7 +214,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,.8);
 display:none;
 align-items:center;
 justify-content:center;
@@ -216,11 +246,11 @@ background:#16243d;
 padding:25px;
 border-radius:10px;
 text-align:center;
-transition:0.3s;
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 background:#1e3356;
 }
 
@@ -253,7 +283,7 @@ gap:40px;
 
 .contact-box{
 background:#16243d;
-padding:15px;
+padding:14px;
 border-radius:6px;
 margin-bottom:10px;
 }
@@ -324,8 +354,8 @@ background:#f1f1f1;
 color:#111;
 }
 
-.light p{
-color:#333;
+.light .hero::before{
+background:rgba(0,0,0,0.55);
 }
 
 </style>
@@ -357,6 +387,8 @@ color:#333;
 
 <section class="hero" id="home">
 
+<div class="hero-content">
+
 <div class="hero-text">
 
 <h1>Hello, I'm Bryan</h1>
@@ -377,262 +409,60 @@ I help brands grow their online presence by managing and optimizing Facebook, In
 <img src="profile.jpg.png">
 </div>
 
-</section>
-
-<section id="results">
-
-<h2>Performance Results</h2>
-
-<div class="counter-grid">
-
-<div>
-<div class="counter" data-target="11200000">0</div>
-<p>Total Views</p>
-</div>
-
-<div>
-<div class="counter" data-target="452">0</div>
-<p>Watch Time Growth %</p>
-</div>
-
-<div>
-<div class="counter" data-target="236000">0</div>
-<p>Content Interactions</p>
-</div>
-
-<div>
-<div class="counter" data-target="150000">0</div>
-<p>Audience Reach</p>
-</div>
-
-</div>
-
-<div class="results">
-
-<div>
-<h3>Before</h3>
-<img src="before.jpg.jpg">
-</div>
-
-<div>
-<h3>After</h3>
-<img src="after.jpg.jpg">
-</div>
-
 </div>
 
 </section>
-
-<section id="works">
-
-<h2>Graphic Portfolio</h2>
-
-<div class="gallery">
-
-<img src="graphic1.jpg.jpg">
-<img src="graphic2.jpg.jpg">
-<img src="graphic3.jpg.jpg">
-<img src="graphic4.jpg.jpg">
-<img src="graphic5.jpg.jpg">
-<img src="graphic6.jpg.jpg">
-<img src="graphic7.jpg.jpg">
-<img src="graphic8.jpg.jpg">
-<img src="graphic9.jpg.jpg">
-<img src="graphic10.jpg.jpg">
-<img src="graphic11.jpg.jpg">
-<img src="graphic12.jpg.jpg">
-<img src="graphic13.jpg.jpg">
-<img src="graphic14.jpg.jpg">
-<img src="graphic15.jpg.jpg">
-<img src="graphic16.jpg.jpg">
-<img src="graphic17.jpg.jpg">
-<img src="graphic18.jpg.jpg">
-<img src="graphic19.jpg.jpg">
-
-</div>
-
-</section>
-
-<section id="videos">
-
-<h2>Video Content</h2>
-
-<div class="video-grid">
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/ztQ-NTioExY"></iframe>
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/A03ppGuUEKM"></iframe>
-
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="grid4">
-
-<div class="card">Social Media Strategy</div>
-<div class="card">Content Strategy</div>
-<div class="card">Audience Growth</div>
-<div class="card">Facebook Marketing</div>
-
-<div class="card">Instagram Marketing</div>
-<div class="card">LinkedIn Marketing</div>
-<div class="card">TikTok Marketing</div>
-<div class="card">Video Editing</div>
-
-</div>
-
-</section>
-
-<section id="tools">
-
-<h2>Tools & Platforms</h2>
-
-<div class="grid4">
-
-<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png"><br>Meta Business Suite</div>
-<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"><br>Canva</div>
-<div class="card"><img src="https://seeklogo.com/images/C/capcut-logo-9477C78A0E-seeklogo.com.png"><br>CapCut</div>
-<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png"><br>Google Workspace</div>
-
-<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png"><br>Microsoft Office</div>
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"><br>ChatGPT</div>
-<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"><br>Gemini</div>
-<div class="card"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"><br>LinkedIn Analytics</div>
-
-</div>
-
-</section>
-
-<section id="experience">
-
-<h2>Professional Experience</h2>
-
-<div class="exp-grid">
-
-<div class="exp">
-<h3>Social Media Specialist</h3>
-<p><b>Bower Investment Partners</b></p>
-<p>Feb 2026 – Present</p>
-</div>
-
-<div class="exp">
-<h3>Digital Marketing / Social Media Manager</h3>
-<p><b>Bicol Speedtech Motorcorp</b></p>
-<p>Feb 2025 – Mar 2026</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Get In Touch</h2>
-
-<div class="contact-grid">
-
-<div>
-
-<div class="contact-box">
-<i class="fa-solid fa-envelope"></i>
- bryanndexter22@gmail.com
-</div>
-
-<div class="contact-box">
-<i class="fa-solid fa-phone"></i>
- 09101042773
-</div>
-
-<div class="contact-box">
-<i class="fa-brands fa-linkedin"></i>
- linkedin.com/in/bryan-dexter-antones-llasos-2two2
-</div>
-
-<div class="contact-box">
-<i class="fa-brands fa-facebook"></i>
- facebook.com/bdllasos
-</div>
-
-<div class="social">
-
-<a href="https://facebook.com/bdllasos"><i class="fab fa-facebook-f"></i></a>
-<a href="https://linkedin.com/in/bryan-dexter-antones-llasos-2two2"><i class="fab fa-linkedin"></i></a>
-<a href="mailto:bryanndexter22@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-
-</div>
-
-</div>
-
-<div>
-
-<form>
-
-<input type="text" placeholder="Your name">
-<input type="email" placeholder="your.email@example.com">
-<textarea rows="6" placeholder="Tell me about your project..."></textarea>
-
-<button>Send Message</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<div class="lightbox" id="lightbox">
-<img id="lightbox-img">
-</div>
 
 <script>
+
+/* DARK MODE */
 
 function toggleMode(){
 document.body.classList.toggle("light")
 }
 
-const counters=document.querySelectorAll(".counter");
+/* COUNTER */
+
+const counters=document.querySelectorAll(".counter")
 
 counters.forEach(counter=>{
 const update=()=>{
-const target=+counter.getAttribute("data-target");
-const c=+counter.innerText;
-const inc=target/200;
+const target=+counter.getAttribute("data-target")
+const c=+counter.innerText
+const inc=target/200
 
 if(c<target){
-counter.innerText=Math.ceil(c+inc);
-setTimeout(update,10);
+counter.innerText=Math.ceil(c+inc)
+setTimeout(update,10)
 }else{
-counter.innerText=target.toLocaleString();
+counter.innerText=target.toLocaleString()
 }
-};
-update();
-});
+}
+update()
+})
 
-const images=document.querySelectorAll(".gallery img");
-const lightbox=document.getElementById("lightbox");
-const lightboxImg=document.getElementById("lightbox-img");
+/* LIGHTBOX */
+
+const images=document.querySelectorAll(".gallery img")
+const lightbox=document.createElement("div")
+lightbox.classList.add("lightbox")
+document.body.appendChild(lightbox)
 
 images.forEach(img=>{
 img.addEventListener("click",()=>{
-lightbox.style.display="flex";
-lightboxImg.src=img.src;
-});
-});
+lightbox.style.display="flex"
+const image=document.createElement("img")
+image.src=img.src
+lightbox.innerHTML=""
+lightbox.appendChild(image)
+})
+})
 
-lightbox.onclick=()=>{
-lightbox.style.display="none";
-};
+lightbox.addEventListener("click",()=>{
+lightbox.style.display="none"
+})
 
-ScrollReveal().reveal("section",{
-distance:"60px",
-duration:1200,
-origin:"bottom",
-interval:200
-});
+ScrollReveal().reveal("section",{distance:"60px",duration:1200,origin:"bottom",interval:200})
 
 </script>
 
