@@ -432,6 +432,42 @@ grid-template-columns:1fr;
 }
 
 }
+
+.doc-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+z-index:1000;
+justify-content:center;
+align-items:center;
+}
+
+.doc-content{
+width:90%;
+height:90%;
+position:relative;
+}
+
+.doc-content iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:10px;
+background:#fff;
+}
+
+.close-btn{
+position:absolute;
+top:-10px;
+right:10px;
+font-size:30px;
+cursor:pointer;
+color:#fff;
+}
   
 </style>
 
@@ -695,6 +731,13 @@ I focus on creating engaging content and applying data-driven strategies to incr
 
 <div class="lightbox" id="lightbox"></div>
 
+<div id="docModal" class="doc-modal">
+  <div class="doc-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <iframe id="docFrame" src=""></iframe>
+  </div>
+</div>
+  
 <script>
 
 function toggleMode(){
@@ -761,6 +804,26 @@ origin:"bottom",
 interval:200
 })
 
+function openModal(type){
+const modal=document.getElementById("docModal")
+const frame=document.getElementById("docFrame")
+
+if(type==="resume"){
+frame.src="https://drive.google.com/file/d/1erSxo81T_QWIVYeVO2N_86k3G6nVXKlR/preview"
+}
+
+if(type==="portfolio"){
+frame.src="https://drive.google.com/file/d/1lP71-sJdK-cH0OPqCWCvfyibLCq66dD5/preview"
+}
+
+modal.style.display="flex"
+}
+
+function closeModal(){
+document.getElementById("docModal").style.display="none"
+document.getElementById("docFrame").src=""
+}
+  
 </script>
 
 </body>
